@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
+//var user = require('./routes/user');
 var ontology = require('./routes/ontology');
 var http = require('http');
 var path = require('path');
@@ -54,7 +54,7 @@ app.use(function(req, res, next) {
 
  
 app.get('/', ontology.info);
-app.get('/users', user.list);
+//app.get('/users', user.list);
 app.get('/ontologies', ontology.list);
 app.get('/ontology/:id', ontology.info);
 

@@ -1,0 +1,10 @@
+_:B9e48befee8f56b940feb56ef26bd891f <http://purl.org/dc/terms/description> "The OBO Foundry is a collaborative experiment involving developers of science-based ontologies who are establishing a set of principles for ontology development with the goal of creating a suite of orthogonal interoperable reference ontologies in the biomedical domain. The groups developing ontologies who have expressed an interest in this goal are listed below, followed by other relevant efforts in this domain" .
+_:B9e48befee8f56b940feb56ef26bd891f <http://purl.org/dc/terms/title> "The OBO Library" .
+_:B9e48befee8f56b940feb56ef26bd891f <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/uberon> .
+_:B9e48befee8f56b940feb56ef26bd891f <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/go> .
+<http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/terms/description> "An ontology covering blah" .
+<http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/terms/title> "Uberon multi-species anatomy ontology" .
+<http://purl.obolibrary.org/obo/uberon> <http://www.w3.org/2000/01/rdf-schema#label> "Uberon" .
+<http://purl.obolibrary.org/obo/uberon> <http://xmlns.com/foaf/0.1/homepage> <http://uberon.org> .
+<http://purl.obolibrary.org/obo/go> <http://purl.org/dc/terms/title> "Gene Ontology" .
+<http://purl.obolibrary.org/obo/go> <http://www.w3.org/2000/01/rdf-schema#label> "GO" .

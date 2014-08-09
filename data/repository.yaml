@@ -20,6 +20,8 @@
   
   Class: owl:Class
 
+  subsets: void:subset
+
   type: 
     "@id": rdf:type
     "@type": "@id"
@@ -46,18 +48,56 @@
 ## BUSINESS STARTS HERE
 ## ----------------------------------------
   
-title: The OBO Library
-description: "The OBO Foundry is a collaborative experiment involving developers of science-based ontologies who are establishing a set of principles for ontology development with the goal of creating a suite of orthogonal interoperable reference ontologies in the biomedical domain. The groups developing ontologies who have expressed an interest in this goal are listed below, followed by other relevant efforts in this domain"
+id: http://monarchinitiative.org
+title: Monarch Ontologies
+description: "A subset of the OBO Library of intrest to The Monarch project and GO"
 
 ontologies:
+
  - id: uberon
+   type: owl:Ontology
    label: Uberon
    title: Uberon multi-species anatomy ontology
    description: An ontology covering blah
-   subset: uberon/bridge/uberon-bridge-to-zfa.owl
+   subsets:
+    - uberon/bridge/uberon-bridge-to-zfa
+    - uberon/bridge/uberon-bridge-to-ma
    homepage: http://uberon.org
    mailing-list: https://lists.sourceforge.net/lists/listinfo/obo-anatomy
+   owl-ontology: uberon.owl
+   dependencies:
+    - id: go
+    - id: cl
+
  - id: go
    label: GO
    title: Gene Ontology
+   dependencies:
+    - id: uberon
+    - id: cl
 
+ - id: cl
+   label: Cell Ontology
+   title: Cell Ontology
+   dependencies:
+    - id: uberon
+    - id: go
+
+ - id: uberon/bridge/uberon-bridge-to-zfa
+   title: BridgeOntology
+   label: Uberon bridge to ZFA
+   dependencies:
+    - id: uberon
+    - id: zfa
+
+ - id: uberon/bridge/uberon-bridge-to-ma
+   title: BridgeOntology
+   label: Uberon bridge to MA
+   dependencies:
+    - id: uberon
+    - id: ma
+
+mailing-lists:
+
+- id: https://lists.sourceforge.net/lists/listinfo/obo-anatomy
+  labe: OBO Anatomy Mailing List
