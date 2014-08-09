@@ -1,10 +1,28 @@
-_:B9e48befee8f56b940feb56ef26bd891f <http://purl.org/dc/terms/description> "The OBO Foundry is a collaborative experiment involving developers of science-based ontologies who are establishing a set of principles for ontology development with the goal of creating a suite of orthogonal interoperable reference ontologies in the biomedical domain. The groups developing ontologies who have expressed an interest in this goal are listed below, followed by other relevant efforts in this domain" .
-_:B9e48befee8f56b940feb56ef26bd891f <http://purl.org/dc/terms/title> "The OBO Library" .
-_:B9e48befee8f56b940feb56ef26bd891f <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/uberon> .
-_:B9e48befee8f56b940feb56ef26bd891f <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/go> .
+<http://monarchinitiative.org> <http://purl.org/dc/terms/description> "A subset of the OBO Library of intrest to The Monarch project and GO" .
+<http://monarchinitiative.org> <http://purl.org/dc/terms/title> "Monarch Ontologies" .
+<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/uberon> .
+<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/go> .
+<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/cl> .
+<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/ro> .
 <http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/terms/description> "An ontology covering blah" .
 <http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/terms/title> "Uberon multi-species anatomy ontology" .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon.owl> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/ext.owl> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon.obo> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma> .
+<http://purl.obolibrary.org/obo/uberon> <http://usefulinc.com/ns/doap#mailing-list> "https://lists.sourceforge.net/lists/listinfo/obo-anatomy" .
+<http://purl.obolibrary.org/obo/uberon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.obolibrary.org/obo/uberon> <http://www.w3.org/2000/01/rdf-schema#label> "Uberon" .
 <http://purl.obolibrary.org/obo/uberon> <http://xmlns.com/foaf/0.1/homepage> <http://uberon.org> .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa> <http://purl.org/dc/terms/title> "Uberon bridge to ZFA" .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BridgeOntology> .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma> <http://purl.org/dc/terms/title> "BridgeOntology" .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma> <http://www.w3.org/2000/01/rdf-schema#label> "Uberon bridge to MA" .
 <http://purl.obolibrary.org/obo/go> <http://purl.org/dc/terms/title> "Gene Ontology" .
 <http://purl.obolibrary.org/obo/go> <http://www.w3.org/2000/01/rdf-schema#label> "GO" .
+<http://purl.obolibrary.org/obo/cl> <http://purl.org/dc/terms/title> "Cell Ontology" .
+<http://purl.obolibrary.org/obo/cl> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cl.owl> .
+<http://purl.obolibrary.org/obo/cl> <http://www.w3.org/2000/01/rdf-schema#label> "Cell Ontology" .
+<http://purl.obolibrary.org/obo/ro> <http://purl.org/dc/terms/title> "Relations Ontology" .
+<http://purl.obolibrary.org/obo/ro> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ro.owl> .

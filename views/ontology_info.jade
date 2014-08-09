@@ -21,6 +21,23 @@ block content
       input(name="o" id="ontology" value="#{ont.id}" type="hidden")
 
     div
+      p Artefacts
+      table(class="table table-striped")
+          thead
+            tr: th 
+          tbody
+            each d, i in ont.products
+              tr
+                td
+                  a(href="/ontology/#{d.id}")= d.id
+                td
+                  a(href="http://purl.obolibrary.org/obo/#{d.id}") PURL
+                td.
+                  #{d.title}
+                td.
+                  #{d.description}
+
+    div
       p Dependencies
       table(class="table table-striped")
           thead
@@ -29,7 +46,7 @@ block content
             each d, i in dependencies
               tr
                 td
-                  a(href="/ontology/#{d.id}")= d.label
+                  a(href="/ontology/#{d.id}")= d.id
                 td.
                   #{d.title}
                 td.

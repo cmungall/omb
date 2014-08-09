@@ -11,16 +11,19 @@
   oa: http://www.w3.org/ns/oa#
   identifers: http://identifiers.org/
   void: http://rdfs.org/ns/void#
+  doap: http://usefulinc.com/ns/doap#
+
   id: "@id"
   label: rdfs:label
   comment: rdfs:comment
   description: dc:description
   source: dc:source
   publisher: dc:publisher
+  mailing_list: doap:mailing-list
   
   Class: owl:Class
 
-  subsets: void:subset
+  products: void:subset
 
   type: 
     "@id": rdf:type
@@ -59,15 +62,61 @@ ontologies:
    label: Uberon
    title: Uberon multi-species anatomy ontology
    description: An ontology covering blah
-   subsets:
-    - uberon/bridge/uberon-bridge-to-zfa
-    - uberon/bridge/uberon-bridge-to-ma
    homepage: http://uberon.org
-   mailing-list: https://lists.sourceforge.net/lists/listinfo/obo-anatomy
-   owl-ontology: uberon.owl
+   mailing_list: https://lists.sourceforge.net/lists/listinfo/obo-anatomy
    dependencies:
     - id: go
     - id: cl
+   canonical: uberon.owl
+   taxon: Metazoa
+   domain: anatomy
+   repository: https://github.com/obophenotype/uberon
+   tracker: https://github.com/obophenotype/uberon/issues
+   editor: http://orcid.org/0000-0002-6601-2165
+   products:
+    - id: uberon.owl
+      title: Canonical edition
+      is_canonical: true
+    - id: uberon/ext.owl
+      title: Includes subsets of other ontologies
+      mireots_from: cl
+      mireots_from: pr
+      mireots_from: envo
+      mireots_from: go
+      mireots_from: pato
+      mireots_from: ncbitaxon
+    - id: uberon/basic.obo
+      format: obo
+      type: obo-basic
+    - id: uberon/bridge/uberon-bridge-to-zfa
+      type: BridgeOntology
+      title: Uberon bridge to ZFA
+      connects:
+        - id: uberon
+        - id: zfa
+
+    - id: uberon/bridge/uberon-bridge-to-ma
+      title: BridgeOntology
+      label: Uberon bridge to MA
+      connects:
+        - id: uberon
+        - id: ma
+
+    - id: uberon/composite-metazoan.owl
+      title: MergedOntology
+      label: Uberon composite metazoan ontology
+      mireots_from: zfa
+      mireots_from: xao
+      mireots_from: fbbt
+      mireots_from: wbbt
+      mireots_from: ma
+      mireots_from: fma
+      mireots_from: emapa
+      mireots_from: ehdaa2
+
+ - id: zfa
+   label: ZFA
+   title: Zebrafish Anatomy Ontology
 
  - id: go
    label: GO
@@ -82,22 +131,29 @@ ontologies:
    dependencies:
     - id: uberon
     - id: go
+   canonical: cl.owl
+   products:
+    - id: cl.owl
+    - id: cl.obo
+    - id: cl/cl-basic.obo
 
- - id: uberon/bridge/uberon-bridge-to-zfa
-   title: BridgeOntology
-   label: Uberon bridge to ZFA
-   dependencies:
-    - id: uberon
-    - id: zfa
-
- - id: uberon/bridge/uberon-bridge-to-ma
-   title: BridgeOntology
-   label: Uberon bridge to MA
-   dependencies:
-    - id: uberon
-    - id: ma
+ - id: ro
+   title: Relations Ontology
+   canonical: ro.owl
+   products:
+    - id: ro.owl
 
 mailing-lists:
 
-- id: https://lists.sourceforge.net/lists/listinfo/obo-anatomy
-  labe: OBO Anatomy Mailing List
+ - id: https://lists.sourceforge.net/lists/listinfo/obo-anatomy
+   labe: OBO Anatomy Mailing List
+
+organizations:
+
+ - id: http://geneontology.org
+
+persons:
+
+ - id: http://orcid.org/0000-0002-6601-2165
+   label: Chris Mungall
+
