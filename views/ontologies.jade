@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1.
+        #{repository.title}
+    div
+        p.
+           Description #{repository.description}
+    div
+        table(class="table table-striped")
+          thead
+            tr: th 
+          tbody
+            each ont, i in ontologies
+              tr
+                td
+                  a(href="/ontology/#{ont.id}")= ont.label
+                td.
+                  #{ont.title}
+                td.
+                  #{ont.description}

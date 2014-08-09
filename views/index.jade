@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1.
+        Ontology List
+    ul
+        each ont, i in ontologies
+            li
+                a(href="http://foo#{ont.id}")= ont.name

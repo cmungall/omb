@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1
+        Name #{ont.label}
+    div
+      dl(class="dl-horizontal")
+        dt id
+        dd #{ont.id}
+        dt title
+        dd #{ont.title}
+        dt description
+        dd= ont.description
+        dt homepage
+        dd 
+          a(href="#{ont.homepage}")= ont.homepage
