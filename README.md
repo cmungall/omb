@@ -26,14 +26,17 @@ Latest version may or may not be deployed on heroku
 
 ## Repository metadata
 
-The repository is stored in YAML. Technically "YAML-LD" (it includes a
-JSON-LD @context. Only the subset of YAML that is supported by JSON is
-used. This means it is formally a JSON-LD file. And also formally an
-RDF file).
+The repository is stored as YAML in
+[master/data/repository.yaml](data/repository.yaml). Technically
+"YAML-LD" (it includes a JSON-LD @context. Only the subset of YAML
+that is supported by JSON is used. This means it is formally a JSON-LD
+file. And also formally an RDF file).
 
 The application reads the YAML file. There is also a makefile provided
 to "convert" the YAML-LD to RDF. This is an entirely generic
-conversion, performed using JENA Riot.
+conversion, performed using JENA Riot (see Makefile):
+
+ * [https://raw.githubusercontent.com/cmungall/omb/master/data/repository.ttl](data/repository.ttl)
 
 ## Metadata Datamodel
 
