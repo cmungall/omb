@@ -9,6 +9,13 @@ artefacts. It is partially designed to replace the ancient OBO Library
 interface on http://obofoundry.org - but should also be somewhat
 generic
 
+## Improvements over old page
+
+ * doesn't suck
+ * correctly models distinction between an ontology and the subsets/artefacts it produces
+ * supports various other metadata tags, including twitter feeds, publications, ...
+ * social - integration with twitter
+
 ## Repository metadata
 
 The repository is stored in YAML. Technically "YAML-LD" (it includes a

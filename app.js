@@ -53,10 +53,13 @@ app.use(function(req, res, next) {
 });
 
  
-app.get('/', ontology.info);
+app.get('/', ontology.list);
 //app.get('/users', user.list);
 app.get('/ontologies', ontology.list);
 app.get('/ontology/:id', ontology.info);
+
+app.get('/*', function(req, res){ res.send("FALL THROUGH")});
+
 
 
 /// error handlers

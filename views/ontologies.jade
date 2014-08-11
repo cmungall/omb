@@ -14,8 +14,17 @@ block content
             each ont, i in ontologies
               tr
                 td
-                  a(href="/ontology/#{ont.id}")= ont.label
+                  a(href="/ontology/#{ont.id}")= ont.id
                 td.
                   #{ont.title}
                 td.
-                  #{ont.description}
+                  #{ont.description_short}
+                td.
+                  #{ont.domain}
+                td
+                  if ont.tracker 
+                    a(href="#{ont.tracker}") 
+                      img(src="http://obofoundry.org/images/blue-footprint.gif" alt="tracker" title="tracker")
+                  else
+                    | -
+

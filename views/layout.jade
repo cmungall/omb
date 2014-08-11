@@ -7,5 +7,27 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
+    script(id="twitter-wjs" src="//platform.twitter.com/widgets.js")
+
   body
-    block content
+        div.navbar.navbar-fixed-top
+            div.navbar-inner
+                div.container
+                    a(data-toggle='collapse',data-target='.nav-collapse').btn.btn-navbar
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(href='#').brand #{title}
+                    div.nav-collapse
+                        ul.nav
+                            li.active
+                                a(href='/') Ontologies
+                            li
+                                a(href='/about') About
+                            li
+                                a(href='/contact') Contact
+        block content
+
+    div.container!= body
+        footer
+            p Generic Footer 2014

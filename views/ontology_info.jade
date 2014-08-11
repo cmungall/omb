@@ -4,17 +4,69 @@ block content
     h1
         Name #{ont.label}
     div
+      if ont.depicted_by
+        img(src="#{ont.depicted_by}")
+      if ont.twitter
+        div(class="btn-o" data-scribe="component:button" contextmenu="menu")
+          a(id="follow-button" class="btn" title="Follow #{ont.id} (@#{ont.twitter}) on Twitter" href="https://twitter.com/intent/follow?screen_name=#{ont.twitter}&tw_p=followbutton&variant=2.0") follow #{ont.twitter}
+            i
+            span(id="l" class="label")
+    div
       dl(class="dl-horizontal")
         dt id
         dd #{ont.id}
+
         dt title
         dd #{ont.title}
+
         dt description
         dd= ont.description
+
         dt homepage
         dd 
           a(href="#{ont.homepage}")= ont.homepage
+
+        dt repository
+        dd 
+          a(href="#{ont.repository}")= ont.repository
+
+        dt tracker
+        dd 
+          if ont.tracker
+            a(href="#{ont.tracker}")= ont.tracker
+          else
+            button(type="button" class="btn btn-danger") This ontology has no tracker
+
+
+        if ont.publication
+          dt publication
+          dd
+           a(href="#{ont.publication}")= ont.publication 
+          dt citations
+          dd
+           a(href="#{ont.citations_pubmed}") [Pubmed]
+           span .
+           a(href="http://scholar.google.com/scholar?cites=#{ont.publication}") [Google Scholar]
+
+        dt social media
+        dd 
+          if ont.twitter
+            span
+              a(href="http://twitter.com/#{ont.twitter}") &nbsp; twitter 
+          if ont.google_plus
+            span
+              a(href="http://twitter.com/#{ont.google_plus}") &nbsp; G+
+
+
     div
+     dl(class="dl-horizontal")
+       dt browse
+       dd
+        a(href="http://ols.wordvis.com/ont=#{ont.prefix}") [OLSViz]
+        span *
+        a(href="http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=#{ont.prefix}") [OLS]
+        span *
+        a(href="http://www.ontobee.org/browser/index.php?o=#{ont.prefix}") [Ontobee]
      form(id="form_term_search" action="http://www.ontobee.org/browser/index.php" method="get" style="padding-top:20px; padding-bottom:20px;")
       input(aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" id="keywords" name="keywords" size="30" value="")
       input(name="Submit2" value="Search OntoBee" type="submit")
@@ -29,13 +81,19 @@ block content
             each d, i in ont.products
               tr
                 td
-                  a(href="/ontology/#{d.id}")= d.id
+                  a(href="/product/#{d.id}")= d.id
+                td.
+                  #{d.type}
                 td
                   a(href="http://purl.obolibrary.org/obo/#{d.id}") PURL
                 td.
                   #{d.title}
                 td.
                   #{d.description}
+                td
+                  if d.page
+                    a(href="#{d.page}") Docs
+                  
 
     div
       p Dependencies
