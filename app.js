@@ -5,7 +5,6 @@
 
 var express = require('express');
 var routes = require('./routes');
-//var user = require('./routes/user');
 var ontology = require('./routes/ontology');
 var http = require('http');
 var path = require('path');
@@ -42,21 +41,16 @@ try {
 
 // Make our repository accessible to our router
 app.use(function(req,res,next){
-    console.log("foobar");
     req.repository = repository;
     next();
 });
 
-app.use(function(req, res, next) {
-  console.log('YO %s %s', req.method, req.url);
-  next();
-});
 
  
 app.get('/', ontology.list);
-//app.get('/users', user.list);
 app.get('/ontologies', ontology.list);
 app.get('/ontology/:id', ontology.info);
+app.get('/obo/*', ontology.fall_through);
 
 app.get('/*', function(req, res){ res.send("FALL THROUGH")});
 

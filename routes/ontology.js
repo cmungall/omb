@@ -65,3 +65,44 @@ exports.info = function(req, res){
                });
 };
 
+exports.fall_through = function(req, res) {
+    var repository = req.repository;
+    var path = req.path.replace("/obo/","");
+    console.log("OBO: "+path);
+    var idmatch = path.match(/^(\S+)_(\S+)$/);
+    var url;
+    if (idmatch) {
+        console.log("Looks like an ID/fragment: "+idmatch);
+        var prefix = idmatch[1];
+        var fragment = idmatch[2];
+        url = "http://www.ontobee.org/browser/rdf.php?o="+prefix+"&iri=http://purl.obolibrary.org/obo/" + path;
+    }
+    else {
+        var match = path.match(/^([\w\-]+)\/(.*)/);
+        var prefix = match[1];
+        var rest = match[2];
+        var ontid = prefix.toLowerCase();
+        var ont = lookup(repository, ontid);
+        if (ont == null) {
+            res.send(500);
+        }
+        if (ont.redirects) {
+            for (var k in ont.redirects) {
+                var x = ont.redirects[k];
+                if (rest.match(x.match)) {
+                    url = rest.replace(x.match, x.url);
+                    console.log("REDIRECTING "+path+" ==> "+url);
+                    break;
+                }
+            }
+        }
+    }
+
+    if (url) {
+        res.redirect(url);
+    }
+    else {
+        res.send("DUNNO WHAT TO DO WITH "+path);
+    }
+    
+};

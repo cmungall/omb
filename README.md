@@ -9,6 +9,12 @@ artefacts. It is partially designed to replace the ancient OBO Library
 interface on http://obofoundry.org - but should also be somewhat
 generic
 
+## Demo
+
+Latest version may or may not be deployed on heroku
+
+ * http://enigmatic-wildwood-5530.herokuapp.com/
+
 ## Improvements over old page
 
  * doesn't suck
@@ -36,7 +42,9 @@ The model is designed to support a distinction between ontologies in
 the sense of an all-encompassing project (e.g. GO) and the different
 editions of that ontology: e.g. subsets, supersets, bridge files.
 
-## Installation
+## Local Installation
+
+Check out the repo from github
 
 ``
 npm install
@@ -50,6 +58,45 @@ node app.js
 
 After that connect to locahost:3000
 
+## Redirects
+
+One possibility is using the app as a replacement for OCLC. A demo has
+been implemented with the Uerbon configuration, the YAML-LD looks like
+this:
+
+```
+  - id: uberon
+  ...
+    redirects:
+      - match: "releases/"
+        url: "http://svn.code.sf.net/p/obo/svn/uberon/releases/"
+      - match: ""
+        url: "http://berkeleybop.org/ontologies/uberon/"
+```
+
+The idea is that http://purl.obolibrary.org/ could be mapped to the
+deployed add. URLs starting with /obo/ are mapped to the redirects
+above, in order (proxyPass may also be an option). E.g.
+
+
+ * http://enigmatic-wildwood-5530.herokuapp.com/obo/uberon/bridge/uberon-bridge-to-nifstd.owl
+ * http://enigmatic-wildwood-5530.herokuapp.com/obo/uberon/releases/2014-07-31/bridge/uberon-bridge-to-nifstd.owl
+
+
+Class URIs automatically get redirected to OntoBee
+
+ * enigmatic-wildwood-5530.herokuapp.com/obo/UBERON_0000955
+
+It would be trivial to implemented overrides (e.g. for PR). TODO.
+
+
+
+
+## TODO
+
+ * separate registry from browser code
+ * add some pizazz so it doesn't look like every bootstrap app out there
+ * browsing of non-ontology artefacts (e.g. people)
 
 
 

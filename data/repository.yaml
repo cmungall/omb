@@ -82,6 +82,11 @@ ontologies:
       label: Chris Mungall
     publication: http://www.ncbi.nlm.nih.gov/pubmed/22293552
     depicted_by: http://uberon.github.io/images/u-logo.jpg
+    redirects:
+      - match: "releases/"
+        url: "http://svn.code.sf.net/p/obo/svn/uberon/releases/"
+      - match: ""
+        url: "http://berkeleybop.org/ontologies/uberon/"
     dependencies:
      - id: go
        subset: uberon/go_import.owl
