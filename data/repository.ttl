@@ -1,28 +1,647 @@
-<http://monarchinitiative.org> <http://purl.org/dc/terms/description> "A subset of the OBO Library of intrest to The Monarch project and GO" .
-<http://monarchinitiative.org> <http://purl.org/dc/terms/title> "Monarch Ontologies" .
-<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/uberon> .
-<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/go> .
-<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/cl> .
-<http://monarchinitiative.org> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.obolibrary.org/obo/ro> .
-<http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/terms/description> "An ontology covering blah" .
-<http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/terms/title> "Uberon multi-species anatomy ontology" .
+<http://obolibrary.org> <http://purl.org/dc/elements/1.1/description> "A set of ontology libraries for doing useful stuff. This is a demo, DO NOT TRUST ANY INFO YOU SEE HERE" .
+<http://obolibrary.org> <http://purl.org/dc/elements/1.1/title> "OBO Library VERY EXPERIMENTAL BROWSER" .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/uberon> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/go> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/cl> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ro> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ncbitaxon> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/iao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/cdao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/poro> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ido> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mmo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/epo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/gaz> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/trans> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/cheminf> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/pco> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ogi> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/geo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/sbo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/emap> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/vto> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/tao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/bila> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/oba> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/aero> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/apo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/bspo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/bto> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/vario> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/rex> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ms> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/chebi> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fbbt> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/wbphenotype> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/chmo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mi> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/hp> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fugo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ovae> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/cmo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/kisao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/clo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/omit> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ma> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/flu> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/emapa> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/vo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fix> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fbdv> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ogg> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/uo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/lipro> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/bco> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/zfs> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fypo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/eo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/xco> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ogms> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/swo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fma> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ehdaa2> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/rs> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/pato> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/miro> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/caro> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/xao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/po> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/taxrank> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/symp> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mf> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/opl> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/rnao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/pr> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/doid> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ovao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/wbls> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mpath> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mp> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/bfo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/vsao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/to> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/nbo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/hao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/pw> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/tads> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/nmr> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mod> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fbbi> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mirnao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/uberon-basic> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/xso> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/eco> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ero> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/envo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/dron> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/omrse> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/oae> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/so> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/exo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/hom> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fao> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ogsf> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mfoem> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/aeo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/tgma> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/ddanat> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/vhog> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/zfa> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/obi> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/resid> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/wbbt> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mamo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/spd> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/idomal> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/mfo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/bcgo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/sep> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/miapa> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/fbsp> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/cvdo> .
+<http://obolibrary.org> <http://purl.org/dc/terms/1.1/hasPart> <http://purl.obolibrary.org/obo/tto> .
+<http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/elements/1.1/description> "Uberon is an integrated cross-species anatomy ontology representing a variety of entities classified according to traditional anatomical criteria such as structure, function and developmental lineage. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data" .
+<http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/elements/1.1/title> "Uberon multi-species anatomy ontology" .
+<http://purl.obolibrary.org/obo/uberon> <http://purl.org/dc/terms/1.1/publication> "http://www.ncbi.nlm.nih.gov/pubmed/22293552" .
 <http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon.owl> .
 <http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/ext.owl> .
-<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon.obo> .
-<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa> .
-<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/basic.obo> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma.owl> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/composite-metazoan.owl> .
+<http://purl.obolibrary.org/obo/uberon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon/composite-vertebrate.owl> .
 <http://purl.obolibrary.org/obo/uberon> <http://usefulinc.com/ns/doap#mailing-list> "https://lists.sourceforge.net/lists/listinfo/obo-anatomy" .
 <http://purl.obolibrary.org/obo/uberon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.obolibrary.org/obo/uberon> <http://www.w3.org/2000/01/rdf-schema#label> "Uberon" .
 <http://purl.obolibrary.org/obo/uberon> <http://xmlns.com/foaf/0.1/homepage> <http://uberon.org> .
-<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa> <http://purl.org/dc/terms/title> "Uberon bridge to ZFA" .
-<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BridgeOntology> .
-<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma> <http://purl.org/dc/terms/title> "BridgeOntology" .
-<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma> <http://www.w3.org/2000/01/rdf-schema#label> "Uberon bridge to MA" .
-<http://purl.obolibrary.org/obo/go> <http://purl.org/dc/terms/title> "Gene Ontology" .
+<http://purl.obolibrary.org/obo/uberon.owl> <http://purl.org/dc/elements/1.1/title> "Uberon" .
+<http://purl.obolibrary.org/obo/uberon.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.obolibrary.org/obo/uberon/ext.owl> <http://purl.org/dc/elements/1.1/description> "Uberon extended" .
+<http://purl.obolibrary.org/obo/uberon/ext.owl> <http://purl.org/dc/elements/1.1/title> "Uberon edition that includes subsets of other ontologies" .
+<http://purl.obolibrary.org/obo/uberon/ext.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.obolibrary.org/obo/uberon/basic.obo> <http://purl.org/dc/elements/1.1/description> "Uberon edition that excludes external ontologies and most relations" .
+<http://purl.obolibrary.org/obo/uberon/basic.obo> <http://purl.org/dc/elements/1.1/title> "Uberon basic" .
+<http://purl.obolibrary.org/obo/uberon/basic.obo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/obo-basic-ontology> .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl> <http://purl.org/dc/elements/1.1/description> "Taxonomic equivalence axioms connecting zebrafish-specific classes to generic uberon counterparts" .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl> <http://purl.org/dc/elements/1.1/title> "Uberon bridge to ZFA" .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BridgeOntology> .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-zfa.owl> <http://xmlns.com/foaf/0.1/page> <https://github.com/obophenotype/uberon/wiki/inter-anatomy-ontology-bridge-ontologies> .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma.owl> <http://purl.org/dc/elements/1.1/description> "Taxonomic equivalence axioms connecting adult mouse specific classes to generic uberon counterparts" .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma.owl> <http://purl.org/dc/elements/1.1/title> "Uberon bridge to MA" .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BridgeOntology> .
+<http://purl.obolibrary.org/obo/uberon/bridge/uberon-bridge-to-ma.owl> <http://xmlns.com/foaf/0.1/page> <https://github.com/obophenotype/uberon/wiki/inter-anatomy-ontology-bridge-ontologies> .
+<http://purl.obolibrary.org/obo/uberon/composite-metazoan.owl> <http://purl.org/dc/elements/1.1/title> "Uberon composite metazoan ontology" .
+<http://purl.obolibrary.org/obo/uberon/composite-metazoan.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/MergedOntology> .
+<http://purl.obolibrary.org/obo/uberon/composite-metazoan.owl> <http://xmlns.com/foaf/0.1/page> <https://github.com/obophenotype/uberon/wiki/Multi-species-composite-ontologies> .
+<http://purl.obolibrary.org/obo/uberon/composite-vertebrate.owl> <http://purl.org/dc/elements/1.1/title> "Uberon composite vertebrate ontology" .
+<http://purl.obolibrary.org/obo/uberon/composite-vertebrate.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/MergedOntology> .
+<http://purl.obolibrary.org/obo/uberon/composite-vertebrate.owl> <http://xmlns.com/foaf/0.1/page> <https://github.com/obophenotype/uberon/wiki/Multi-species-composite-ontologies> .
+<http://purl.obolibrary.org/obo/go> <http://purl.org/dc/elements/1.1/title> "Gene Ontology" .
+<http://purl.obolibrary.org/obo/go> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/go.owl> .
 <http://purl.obolibrary.org/obo/go> <http://www.w3.org/2000/01/rdf-schema#label> "GO" .
-<http://purl.obolibrary.org/obo/cl> <http://purl.org/dc/terms/title> "Cell Ontology" .
+<http://purl.obolibrary.org/obo/cl> <http://purl.org/dc/elements/1.1/title> "Cell Ontology" .
 <http://purl.obolibrary.org/obo/cl> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cl.owl> .
+<http://purl.obolibrary.org/obo/cl> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cl.obo> .
+<http://purl.obolibrary.org/obo/cl> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cl/cl-basic.obo> .
+<http://purl.obolibrary.org/obo/cl> <http://usefulinc.com/ns/doap#mailing-list> "https://lists.sourceforge.net/lists/listinfo/obo-cell-type" .
 <http://purl.obolibrary.org/obo/cl> <http://www.w3.org/2000/01/rdf-schema#label> "Cell Ontology" .
-<http://purl.obolibrary.org/obo/ro> <http://purl.org/dc/terms/title> "Relations Ontology" .
+<http://purl.obolibrary.org/obo/ro> <http://purl.org/dc/elements/1.1/title> "Relations Ontology" .
 <http://purl.obolibrary.org/obo/ro> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ro.owl> .
+<http://purl.obolibrary.org/obo/ro> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ro.obo> .
+<http://purl.obolibrary.org/obo/ro> <http://usefulinc.com/ns/doap#mailing-list> "https://lists.sourceforge.net/lists/listinfo/obo-relations" .
+<http://purl.obolibrary.org/obo/ncbitaxon> <http://purl.org/dc/elements/1.1/description> "The NCBITaxon ontology is an automatic translation of the NCBI taxonomy (a taxonomic classification of living organisms and associated artifacts) database into obo/owl." .
+<http://purl.obolibrary.org/obo/ncbitaxon> <http://purl.org/dc/elements/1.1/source> "http://www.ncbi.nlm.nih.gov/taxonomy" .
+<http://purl.obolibrary.org/obo/ncbitaxon> <http://purl.org/dc/elements/1.1/title> "NCBI organismal classification" .
+<http://purl.obolibrary.org/obo/ncbitaxon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ncbitaxon.owl> .
+<http://purl.obolibrary.org/obo/ncbitaxon> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl> .
+<http://purl.obolibrary.org/obo/ncbitaxon> <http://xmlns.com/foaf/0.1/homepage> <http://www.obofoundry.org/wiki/index.php/NCBITaxon:Main_Page> .
+<http://purl.obolibrary.org/obo/ncbitaxon> <http://xmlns.com/foaf/0.1/page> <http://www.ncbi.nlm.nih.gov/taxonomy> .
+<http://purl.obolibrary.org/obo/iao> <http://purl.org/dc/elements/1.1/description> "The Information Artifact Ontology (IAO) is a new ontology of information entities, originally driven by work by the OBI digital entity and realizable information entity branch. " .
+<http://purl.obolibrary.org/obo/iao> <http://purl.org/dc/elements/1.1/title> "Information Artifact Ontology" .
+<http://purl.obolibrary.org/obo/iao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/iao.owl> .
+<http://purl.obolibrary.org/obo/iao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/iao/d-acts.owl> .
+<http://purl.obolibrary.org/obo/iao> <http://xmlns.com/foaf/0.1/homepage> <http://purl.obolibrary.org/obo/iao> .
+<http://purl.obolibrary.org/obo/iao> <http://xmlns.com/foaf/0.1/page> <http://code.google.com/p/information-artifact-ontology/> .
+<http://purl.obolibrary.org/obo/iao/d-acts.owl> <http://purl.org/dc/elements/1.1/description> "An ontology based on a theory of document acts describing what people can do with documents" .
+<http://purl.obolibrary.org/obo/iao/d-acts.owl> <http://purl.org/dc/elements/1.1/title> "ontology of document acts" .
+<http://purl.obolibrary.org/obo/cdao> <http://purl.org/dc/elements/1.1/description> "a formalization of concepts and relations relevant to evolutionary comparative analysis, such as phylogenetic trees, OTUs (operational taxonomic units) and compared characters (including molecular characters as well as other types). CDAO is being developed by scientists in biology, evolution, and computer science" .
+<http://purl.obolibrary.org/obo/cdao> <http://purl.org/dc/elements/1.1/title> "Comparative Data Analysis Ontology" .
+<http://purl.obolibrary.org/obo/cdao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cdao.owl> .
+<http://purl.obolibrary.org/obo/cdao> <http://xmlns.com/foaf/0.1/homepage> <http://sourceforge.net/apps/mediawiki/cdao/index.php?title=Main_Page> .
+<http://purl.obolibrary.org/obo/poro> <http://purl.org/dc/elements/1.1/description> "The Porifera Ontology (PORO) is an ontology covering the anatomy of the taxon Porifera (sponges)" .
+<http://purl.obolibrary.org/obo/poro> <http://purl.org/dc/elements/1.1/title> "Porifera Ontology" .
+<http://purl.obolibrary.org/obo/poro> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/poro.owl> .
+<http://purl.obolibrary.org/obo/poro> <http://xmlns.com/foaf/0.1/homepage> <http://purl.obolibrary.org/obo/poro> .
+<http://purl.obolibrary.org/obo/ido> <http://purl.org/dc/elements/1.1/title> "Infectious disease" .
+<http://purl.obolibrary.org/obo/ido> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ido.owl> .
+<http://purl.obolibrary.org/obo/ido> <http://xmlns.com/foaf/0.1/homepage> <http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology> .
+<http://purl.obolibrary.org/obo/mmo> <http://purl.org/dc/elements/1.1/description> "The Measurement Method Ontology is designed to represent the variety of methods used to make qualitative and quantitative clinical and phenotype measurements both in the clinic and with model organisms. " .
+<http://purl.obolibrary.org/obo/mmo> <http://purl.org/dc/elements/1.1/title> "Measurement method ontology" .
+<http://purl.obolibrary.org/obo/mmo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mmo.owl> .
+<http://purl.obolibrary.org/obo/epo> <http://purl.org/dc/elements/1.1/description> "The Epidemiology Ontology is an ontology designed to support the semantic annotation of epidemiology resources. It is being developed under the EU-funded EPIWORK project, a multidisciplinary research effort which aims at increasing the amount of epidemiological data available, improving disease surveillance systems, and promoting the collaboration among epidemiological researchers. Th15:40:49 WARN  riot                 :: Bad IRI: <http://www.yeastgenome.org/ > Code: 18/DOUBLE_WHITESPACE in PATH: Either two or more consecutive whitespace characters, or leading or trailing whitespace. These match no grammar rules of URIs/IRIs. These characters are permitted in RDF URI References, XML system identifiers, but not XML Schema anyURIs.
+15:40:49 WARN  riot                 :: Bad IRI: < http://purl.obolibrary.org/obo/fbbt> Code: 0/ILLEGAL_CHARACTER in SCHEME: The character violates the grammar rules for URIs/IRIs.
+e EO is integrated into NERO (Network of Epidemiology Related Ontologies), a collection of existing ontologies that supports the semantic annotation of epidemiology resources contained in the Epidemic Marketplace (EM), a platform for sharing resources and knowledge within the Epidemiology community. NERO currently includes thirteen external ontologies (the majority are OBO or OBO candidate ontologies) which already provide a high coverage of most epidemiology related areas. As such, the EPO focuses on neglected/highly specific areas of epidemiology and will articulate with other OBO ontologies as needed." .
+<http://purl.obolibrary.org/obo/epo> <http://purl.org/dc/elements/1.1/title> "Epidemiology Ontology" .
+<http://purl.obolibrary.org/obo/epo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/epo.owl> .
+<http://purl.obolibrary.org/obo/epo> <http://xmlns.com/foaf/0.1/homepage> <https://code.google.com/p/epidemiology-ontology/> .
+<http://purl.obolibrary.org/obo/gaz> <http://purl.org/dc/elements/1.1/title> "Gazetteer" .
+<http://purl.obolibrary.org/obo/gaz> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/gaz.owl> .
+<http://purl.obolibrary.org/obo/gaz> <http://xmlns.com/foaf/0.1/homepage> <http://gensc.org/gc_wiki/index.php/GAZ_Project> .
+<http://purl.obolibrary.org/obo/trans> <http://purl.org/dc/elements/1.1/description> "This vocabulary describes a process that is the means of how a pathogen is transmitted from one host, reservoir, or source to another host. This transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles.  " .
+<http://purl.obolibrary.org/obo/trans> <http://purl.org/dc/elements/1.1/title> "Pathogen transmission" .
+<http://purl.obolibrary.org/obo/trans> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/trans.owl> .
+<http://purl.obolibrary.org/obo/trans> <http://xmlns.com/foaf/0.1/homepage> <http://diseaseontology.sourceforge.net/> .
+<http://purl.obolibrary.org/obo/cheminf> <http://purl.org/dc/elements/1.1/description> "Includes terms for the descriptors commonly used in cheminformatics software applications and the algorithms which generate them." .
+<http://purl.obolibrary.org/obo/cheminf> <http://purl.org/dc/elements/1.1/title> "Chemical Information Ontology" .
+<http://purl.obolibrary.org/obo/cheminf> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cheminf.owl> .
+<http://purl.obolibrary.org/obo/cheminf> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/semanticchemistry/> .
+<http://purl.obolibrary.org/obo/pco> <http://purl.org/dc/elements/1.1/description> "The Population and Community Ontology (PCO) describes material entities, qualities, and processes related to collections of interacting organisms such as populations and communities. It is taxon neutral, and can be used for any species, including humans." .
+<http://purl.obolibrary.org/obo/pco> <http://purl.org/dc/elements/1.1/title> "Population and Community Ontology" .
+<http://purl.obolibrary.org/obo/pco> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/pco.owl> .
+<http://purl.obolibrary.org/obo/pco> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/popcomm-ontology/> .
+<http://purl.obolibrary.org/obo/ogi> <http://purl.org/dc/elements/1.1/description> "Using BFO as its framwork, OGI formalized the genomic element by defining an upper class 'genetic interval'. The definition of 'genetic interval' is \"the spatial continuous physical entity which contains ordered genomic sets(DNA, RNA, Allele, Marker,etc.) between and including two points (Nucleic_Acid_Base_Residue) on a chromosome or RNA molecule which must have a liner primary sequence structure." .
+<http://purl.obolibrary.org/obo/ogi> <http://purl.org/dc/elements/1.1/title> "Ontology for genetic interval" .
+<http://purl.obolibrary.org/obo/ogi> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ogi.owl> .
+<http://purl.obolibrary.org/obo/ogi> <http://xmlns.com/foaf/0.1/homepage> <https://code.google.com/p/ontology-for-genetic-interval/> .
+<http://purl.obolibrary.org/obo/geo> <http://purl.org/dc/elements/1.1/description> "An ontology of geographical entities implemented in Web Ontology Language 2 (OWL2) and based on Basic Formal Ontology (BFO). The developers aim to adhere to the OBO Foundry principles." .
+<http://purl.obolibrary.org/obo/geo> <http://purl.org/dc/elements/1.1/title> "Geographical Entity Ontology" .
+<http://purl.obolibrary.org/obo/geo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/geo.owl> .
+<http://purl.obolibrary.org/obo/geo> <http://xmlns.com/foaf/0.1/homepage> <https://code.google.com/p/ge-ontology/> .
+<http://purl.obolibrary.org/obo/sbo> <http://purl.org/dc/elements/1.1/description> "The Systems Biology Ontology is a set of controlled, relational vocabularies of terms commonly used in Systems Biology, and in particular in computational modeling. The ontology consists of six orthogonal vocabularies defining: the roles of reaction participants (eg. \"substrate\"), quantitative parameters (eg. \"Michaelis constant\"), a precise classification of mathematical expressions that describe the system (eg. \"mass action rate law\"), the modeling framework used (eg. \"logical framework\"), and a branch each to describe entity (eg. \"macromolecule\") and interaction (eg. \"process\") types. SBO terms can be used to introduce a layer of semantic information into the standard description of a model, or to annotate the results of biochemical experiments in order to facilitate their efficient reuse. SBO is an Open Biomedical Ontologies (OBO) candidate ontology, and is free for use. More information about SBO can be found from the project FAQ, at http://www.ebi.ac.uk/sbo/ SBO is a project of the BioModels.net effort and is developed through community collaboration" .
+<http://purl.obolibrary.org/obo/sbo> <http://purl.org/dc/elements/1.1/title> "Systems Biology" .
+<http://purl.obolibrary.org/obo/sbo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/sbo.owl> .
+<http://purl.obolibrary.org/obo/sbo> <http://xmlns.com/foaf/0.1/homepage> <http://www.ebi.ac.uk/sbo/> .
+<http://purl.obolibrary.org/obo/emap> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of stage-specific anatomical structures of the mouse (Mus)." .
+<http://purl.obolibrary.org/obo/emap> <http://purl.org/dc/elements/1.1/title> "Mouse gross anatomy and development, timed" .
+<http://purl.obolibrary.org/obo/emap> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/emap.owl> .
+<http://purl.obolibrary.org/obo/emap> <http://xmlns.com/foaf/0.1/homepage> <http://emouseatlas.org> .
+<http://purl.obolibrary.org/obo/emap> <http://xmlns.com/foaf/0.1/page> <http://www.obofoundry.org/wiki/index.php/EMAPA:Main_Page> .
+<http://purl.obolibrary.org/obo/vto> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/vto.owl> .
+<http://purl.obolibrary.org/obo/tao> <http://purl.org/dc/elements/1.1/description> "Multispecies fish anatomy ontology. Originally seeded from ZFA, but intended to cover terms relevant to other taxa" .
+<http://purl.obolibrary.org/obo/tao> <http://purl.org/dc/elements/1.1/title> "Teleost Anatomy Ontology" .
+<http://purl.obolibrary.org/obo/tao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/tao.owl> .
+<http://purl.obolibrary.org/obo/tao> <http://xmlns.com/foaf/0.1/homepage> <https://www.nescent.org/phenoscape/Main_Page> .
+<http://purl.obolibrary.org/obo/bila> <http://purl.org/dc/elements/1.1/title> "Bilateria anatomy" .
+<http://purl.obolibrary.org/obo/bila> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/bila.owl> .
+<http://purl.obolibrary.org/obo/bila> <http://xmlns.com/foaf/0.1/homepage> <http://4dx.embl.de/4DXpress> .
+<http://purl.obolibrary.org/obo/oba> <http://purl.org/dc/elements/1.1/description> "A collection of biological attributes (traits) covering all kingdoms of life. Incorporates VT (vertebrate trait ontology) and TO (plant trait ontology). Extends PATO." .
+<http://purl.obolibrary.org/obo/oba> <http://purl.org/dc/elements/1.1/title> "Ontology of Biological Attributes" .
+<http://purl.obolibrary.org/obo/oba> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/oba.owl> .
+<http://purl.obolibrary.org/obo/oba> <http://xmlns.com/foaf/0.1/homepage> <http://wiki.geneontology.org/index.php/Extensions/x-attribute> .
+<http://purl.obolibrary.org/obo/oba> <http://xmlns.com/foaf/0.1/page> <http://wiki.geneontology.org/index.php/Extensions/x-attribute> .
+<http://purl.obolibrary.org/obo/mo> <http://purl.org/dc/elements/1.1/description> "Concepts, definitions, terms, and resources for standardized description of a microarray experiment in support of MAGE v.1. The MGED ontology is divided into the MGED Core ontology which is intended to be stable and in synch with MAGE v.1; and the MGED Extended ontology which adds further associations and classes not found in MAGE v.1." .
+<http://purl.obolibrary.org/obo/mo> <http://purl.org/dc/elements/1.1/title> "Microarray experimental conditions" .
+<http://purl.obolibrary.org/obo/mo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mo.owl> .
+<http://purl.obolibrary.org/obo/mo> <http://xmlns.com/foaf/0.1/homepage> <http://mged.sourceforge.net/ontologies/MGEDontology.php> .
+<http://purl.obolibrary.org/obo/mo> <http://xmlns.com/foaf/0.1/page> <http://mged.sourceforge.net/software/downloads.php> .
+<http://purl.obolibrary.org/obo/aero> <http://purl.org/dc/elements/1.1/description> "The Adverse Event Reporting Ontology (AERO) is an ontology aimed at supporting clinicians at the time of data entry, increasing quality and accuracy of reported adverse events" .
+<http://purl.obolibrary.org/obo/aero> <http://purl.org/dc/elements/1.1/title> "Adverse Event Reporting Ontology" .
+<http://purl.obolibrary.org/obo/aero> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/aero.owl> .
+<http://purl.obolibrary.org/obo/aero> <http://xmlns.com/foaf/0.1/homepage> <http://purl.obolibrary.org/obo/aero> .
+<http://purl.obolibrary.org/obo/apo> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary for the phenotypes of Ascomycete fungi" .
+<http://purl.obolibrary.org/obo/apo> <http://purl.org/dc/elements/1.1/title> "Ascomycete phenotype ontology" .
+<http://purl.obolibrary.org/obo/apo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/apo.owl> .
+<http://purl.obolibrary.org/obo/apo> <http://xmlns.com/foaf/0.1/homepage> <http://www.yeastgenome.org/ > .
+<http://purl.obolibrary.org/obo/bspo> <http://purl.org/dc/elements/1.1/description> "An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides, and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies. " .
+<http://purl.obolibrary.org/obo/bspo> <http://purl.org/dc/elements/1.1/title> "Biological Spatial Ontology" .
+<http://purl.obolibrary.org/obo/bspo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/bspo.owl> .
+<http://purl.obolibrary.org/obo/bspo> <http://xmlns.com/foaf/0.1/homepage> <https://biological-spatial-ontology.googlecode.com> .
+<http://purl.obolibrary.org/obo/bto> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary for the source of an enzyme. It comprises terms for tissues, cell lines, cell types and cell cultures from uni- and multicellular organisms." .
+<http://purl.obolibrary.org/obo/bto> <http://purl.org/dc/elements/1.1/title> "BRENDA tissue / enzyme source" .
+<http://purl.obolibrary.org/obo/bto> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/bto.owl> .
+<http://purl.obolibrary.org/obo/bto> <http://xmlns.com/foaf/0.1/homepage> <http://www.brenda-enzymes.info> .
+<http://purl.obolibrary.org/obo/bto> <http://xmlns.com/foaf/0.1/page> <http://www.brenda-enzymes.info> .
+<http://purl.obolibrary.org/obo/vario> <http://purl.org/dc/elements/1.1/description> "Variation Ontology, VariO, is an ontology for standardized, systematic description of effects, consequences and mechanisms of variations." .
+<http://purl.obolibrary.org/obo/vario> <http://purl.org/dc/elements/1.1/title> "Variation Ontology" .
+<http://purl.obolibrary.org/obo/vario> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/vario.owl> .
+<http://purl.obolibrary.org/obo/vario> <http://xmlns.com/foaf/0.1/homepage> <http://variationontology.org> .
+<http://purl.obolibrary.org/obo/rex> <http://purl.org/dc/elements/1.1/description> "REX is an ontology of physico-chemical processes, i.e. physico-chemical changes occurring in course of time. REX includes both microscopic processes (involving molecular entities or subatomic particles) and macroscopic processes. Some biochemical processes from Gene Ontology (GO Biological process) can be described as instances of REX." .
+<http://purl.obolibrary.org/obo/rex> <http://purl.org/dc/elements/1.1/title> "Physico-chemical process" .
+<http://purl.obolibrary.org/obo/rex> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/rex.owl> .
+<http://purl.obolibrary.org/obo/ms> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary for the annotation of experiments concerned with proteomics mass spectrometry. Developed by the HUPO Proteomics Standards Initiative." .
+<http://purl.obolibrary.org/obo/ms> <http://purl.org/dc/elements/1.1/title> "Mass spectrometry" .
+<http://purl.obolibrary.org/obo/ms> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ms.owl> .
+<http://purl.obolibrary.org/obo/ms> <http://xmlns.com/foaf/0.1/homepage> <http://www.psidev.info/index.php?q=node/257> .
+<http://purl.obolibrary.org/obo/ms> <http://xmlns.com/foaf/0.1/page> <http://www.psidev.info/index.php?q=node/257> .
+<http://purl.obolibrary.org/obo/chebi> <http://purl.org/dc/elements/1.1/description> "A structured classification of chemical compounds of biological relevance." .
+<http://purl.obolibrary.org/obo/chebi> <http://purl.org/dc/elements/1.1/title> "Chemical entities of biological interest" .
+<http://purl.obolibrary.org/obo/chebi> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/chebi.owl> .
+<http://purl.obolibrary.org/obo/chebi> <http://xmlns.com/foaf/0.1/homepage> <http://www.ebi.ac.uk/chebi> .
+<http://purl.obolibrary.org/obo/chebi> <http://xmlns.com/foaf/0.1/page> <http://www.ebi.ac.uk/chebi/init.do?toolBarForward=userManual> .
+<http://purl.obolibrary.org/obo/fbbt> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy of <i>Drosophila melanogaster</i>." .
+<http://purl.obolibrary.org/obo/fbbt> <http://purl.org/dc/elements/1.1/title> "Drosophila gross anatomy" .
+<http://purl.obolibrary.org/obo/fbbt> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fbbt.owl> .
+<http://purl.obolibrary.org/obo/fbbt> <http://xmlns.com/foaf/0.1/homepage> < http://purl.obolibrary.org/obo/fbbt> .
+<http://purl.obolibrary.org/obo/wbphenotype> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of <i>Caenorhabditis elegans</i> phenotypes" .
+<http://purl.obolibrary.org/obo/wbphenotype> <http://purl.org/dc/elements/1.1/title> "C. elegans phenotype" .
+<http://purl.obolibrary.org/obo/wbphenotype> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/wbphenotype.owl> .
+<http://purl.obolibrary.org/obo/wbphenotype> <http://xmlns.com/foaf/0.1/homepage> <http://www.wormbase.org/> .
+<http://purl.obolibrary.org/obo/chmo> <http://purl.org/dc/elements/1.1/description> "CHMO, the chemical methods ontology, describes methods used to" .
+<http://purl.obolibrary.org/obo/chmo> <http://purl.org/dc/elements/1.1/title> "Chemical Methods Ontology" .
+<http://purl.obolibrary.org/obo/chmo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/chmo.owl> .
+<http://purl.obolibrary.org/obo/chmo> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/rsc-cmo/> .
+<http://purl.obolibrary.org/obo/mi> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary for the annotation of experiments concerned with protein-protein interactions. Developed by the HUPO Proteomics Standards Initiative." .
+<http://purl.obolibrary.org/obo/mi> <http://purl.org/dc/elements/1.1/title> "Protein-protein interaction" .
+<http://purl.obolibrary.org/obo/mi> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mi.owl> .
+<http://purl.obolibrary.org/obo/mi> <http://xmlns.com/foaf/0.1/homepage> <http://psidev.sf.net> .
+<http://purl.obolibrary.org/obo/mi> <http://xmlns.com/foaf/0.1/page> <http://psidev.sourceforge.net/mi/xml/doc/user/index.html> .
+<http://purl.obolibrary.org/obo/hp> <http://purl.org/dc/elements/1.1/description> "The Human Phenotype Ontology is being developed to provide a structured and controlled vocabulary for the phenotypic features encountered in human hereditary and other disease. Our goal is to provide resource for the computational analysis of the human phenome, with a current focus on monogenic diseases listed in the Online Mendelian Inheritance in Man (OMIM) database, for which annotations are also provided." .
+<http://purl.obolibrary.org/obo/hp> <http://purl.org/dc/elements/1.1/title> "human phenotype ontology" .
+<http://purl.obolibrary.org/obo/hp> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/hp.owl> .
+<http://purl.obolibrary.org/obo/hp> <http://xmlns.com/foaf/0.1/homepage> <http://www.human-phenotype-ontology.org/> .
+<http://purl.obolibrary.org/obo/hp> <http://xmlns.com/foaf/0.1/page> <http://www.human-phenotype-ontology.org/> .
+<http://purl.obolibrary.org/obo/fugo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fugo.owl> .
+<http://purl.obolibrary.org/obo/ovae> <http://purl.org/dc/elements/1.1/description> "A biomedical ontology in the domain of vaccine adverse events. OVAE is an extension of the Ontology of Adverse Event (OAE) and uses the vaccine information imported from the Vaccine Ontology (VO). " .
+<http://purl.obolibrary.org/obo/ovae> <http://purl.org/dc/elements/1.1/title> "Ontology of Vaccine Adverse Events" .
+<http://purl.obolibrary.org/obo/ovae> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ovae.owl> .
+<http://purl.obolibrary.org/obo/ovae> <http://xmlns.com/foaf/0.1/homepage> <http://www.violinet.org/ovae/> .
+<http://purl.obolibrary.org/obo/cmo> <http://purl.org/dc/elements/1.1/description> "The Clinical Measurement Ontology is designed to be used to standardize morphological and physiological measurement records generated from clinical and model organism research and health programs." .
+<http://purl.obolibrary.org/obo/cmo> <http://purl.org/dc/elements/1.1/title> "Clinical measurement ontology" .
+<http://purl.obolibrary.org/obo/cmo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cmo.owl> .
+<http://purl.obolibrary.org/obo/kisao> <http://purl.org/dc/elements/1.1/description> "The Kinetic Simulation Algorithm Ontology (KiSAO) classifies algorithms available for the simulation of models in biology, and their characteristics and the parameters required for their use." .
+<http://purl.obolibrary.org/obo/kisao> <http://purl.org/dc/elements/1.1/title> "Kinetic Simulation Algorithm Ontology" .
+<http://purl.obolibrary.org/obo/kisao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/kisao.owl> .
+<http://purl.obolibrary.org/obo/kisao> <http://xmlns.com/foaf/0.1/homepage> <http://biomodels.net/kisao> .
+<http://purl.obolibrary.org/obo/clo> <http://purl.org/dc/elements/1.1/description> "The Cell Line Ontology (CLO) is a community-driven ontology that is developed to standardize and integrate cell line information and support computer-assisted reasoning." .
+<http://purl.obolibrary.org/obo/clo> <http://purl.org/dc/elements/1.1/title> "Cell Line Ontology" .
+<http://purl.obolibrary.org/obo/clo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/clo.owl> .
+<http://purl.obolibrary.org/obo/clo> <http://xmlns.com/foaf/0.1/homepage> <http://www.clo-ontology.org> .
+<http://purl.obolibrary.org/obo/omit> <http://purl.org/dc/elements/1.1/title> "Ontology for MIRNA Target Prediction" .
+<http://purl.obolibrary.org/obo/omit> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/omit.owl> .
+<http://purl.obolibrary.org/obo/omit> <http://xmlns.com/foaf/0.1/homepage> <http://omit.cis.usouthal.edu/> .
+<http://purl.obolibrary.org/obo/omit> <http://xmlns.com/foaf/0.1/page> <http://omit.cis.usouthal.edu/> .
+<http://purl.obolibrary.org/obo/ma> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the adult anatomy of the mouse (Mus)." .
+<http://purl.obolibrary.org/obo/ma> <http://purl.org/dc/elements/1.1/title> "Mouse adult gross anatomy" .
+<http://purl.obolibrary.org/obo/ma> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ma.owl> .
+<http://purl.obolibrary.org/obo/ma> <http://xmlns.com/foaf/0.1/homepage> <http://www.informatics.jax.org/searches/AMA_form.shtml> .
+<http://purl.obolibrary.org/obo/flu> <http://purl.org/dc/elements/1.1/title> "Influenza Ontology" .
+<http://purl.obolibrary.org/obo/flu> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/flu.owl> .
+<http://purl.obolibrary.org/obo/flu> <http://xmlns.com/foaf/0.1/homepage> <http://purl.obolibrary.org/obo/flu/> .
+<http://purl.obolibrary.org/obo/emapa> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of abstract (i.e. non-stage specific) stage-specific anatomical structures of the mouse (Mus)." .
+<http://purl.obolibrary.org/obo/emapa> <http://purl.org/dc/elements/1.1/title> "Mouse gross anatomy and development, abstract" .
+<http://purl.obolibrary.org/obo/emapa> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/emapa.owl> .
+<http://purl.obolibrary.org/obo/emapa> <http://xmlns.com/foaf/0.1/homepage> <http://emouseatlas.org> .
+<http://purl.obolibrary.org/obo/emapa> <http://xmlns.com/foaf/0.1/page> <http://www.obofoundry.org/wiki/index.php/EMAPA:Main_Page> .
+<http://purl.obolibrary.org/obo/vo> <http://purl.org/dc/elements/1.1/description> "To ensure consistent representation of vaccine knowledge and to support automated reasoning, a community-based effort to develop the Vaccine Ontology (VO) has been initiated. This international collaborative VO development effort has been joined by many institutes and disciplines around the world. The Vaccine Ontology is also being used in a variety of applications by many user groups in academia and industry." .
+<http://purl.obolibrary.org/obo/vo> <http://purl.org/dc/elements/1.1/title> "Vaccine ontology" .
+<http://purl.obolibrary.org/obo/vo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/vo.owl> .
+<http://purl.obolibrary.org/obo/vo> <http://xmlns.com/foaf/0.1/homepage> <http://www.violinet.org/vaccineontology> .
+<http://purl.obolibrary.org/obo/fix> <http://purl.org/dc/elements/1.1/description> "FIX consists of two ontologies: methods and properties (but not objects, which are subject of the chemical ontology). The methods are applied to study the properties." .
+<http://purl.obolibrary.org/obo/fix> <http://purl.org/dc/elements/1.1/title> "Physico-chemical methods and properties" .
+<http://purl.obolibrary.org/obo/fix> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fix.owl> .
+<http://purl.obolibrary.org/obo/fbdv> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the development of <i>Drosophila melanogaster</i>." .
+<http://purl.obolibrary.org/obo/fbdv> <http://purl.org/dc/elements/1.1/title> "Drosophila development" .
+<http://purl.obolibrary.org/obo/fbdv> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fbdv.owl> .
+<http://purl.obolibrary.org/obo/fbdv> <http://xmlns.com/foaf/0.1/homepage> <http://www.flybase.org/> .
+<http://purl.obolibrary.org/obo/ogg> <http://purl.org/dc/elements/1.1/description> "The OGG (Ontology of Genes and Genomes) is a formal ontology of genes and genomes of biological organisms. OGG is developed by following OBO Foundry principles and aligning with the BFO top ontology. " .
+<http://purl.obolibrary.org/obo/ogg> <http://purl.org/dc/elements/1.1/title> "The Ontology of Genes and Genomes" .
+<http://purl.obolibrary.org/obo/ogg> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ogg.owl> .
+<http://purl.obolibrary.org/obo/ogg> <http://xmlns.com/foaf/0.1/homepage> <http://ogg.googlecode.com/> .
+<http://purl.obolibrary.org/obo/uo> <http://purl.org/dc/elements/1.1/description> "Metrical units for use in conjunction with PATO" .
+<http://purl.obolibrary.org/obo/uo> <http://purl.org/dc/elements/1.1/title> "Units of measurement" .
+<http://purl.obolibrary.org/obo/uo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uo.owl> .
+<http://purl.obolibrary.org/obo/uo> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/unit-ontology/> .
+<http://purl.obolibrary.org/obo/lipro> <http://purl.org/dc/elements/1.1/description> "Lipid research is increasingly integrated within systems level biology such as lipidomics where lipid classification is required before appropriate annotation of chemical functions can be applied. The ontology describes the LIPIDMAPS nomenclature classification explicitly using description logics (OWL-DL). Lipid classes are organized hierarchically with the super-classes restricted by generic necessary conditions. More specific necessary conditions are used to define membership requirements for sub classes of lipid according to appropriate functional groups. " .
+<http://purl.obolibrary.org/obo/lipro> <http://purl.org/dc/elements/1.1/title> "Lipid Ontology" .
+<http://purl.obolibrary.org/obo/lipro> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/lipro.owl> .
+<http://purl.obolibrary.org/obo/bco> <http://purl.org/dc/elements/1.1/description> "The Biological Collections Ontology (BCO) is a being developed as an application ontology as part of the Biocode Commons project, within the OBO Foundry framework. The goal of the BCO is to support the interoperability of biodiversity data, including data on museum collections, environmental/metagenomic samples, and ecological surveys." .
+<http://purl.obolibrary.org/obo/bco> <http://purl.org/dc/elements/1.1/title> "Biological Collections Ontology" .
+<http://purl.obolibrary.org/obo/bco> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/bco.owl> .
+<http://purl.obolibrary.org/obo/bco> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/bco/> .
+<http://purl.obolibrary.org/obo/zfs> <http://purl.org/dc/elements/1.1/description> "A developmental stages of the Zebrafish (<i>Danio rerio</i>). Note that ZFA includes the leaf nodes of this ontology" .
+<http://purl.obolibrary.org/obo/zfs> <http://purl.org/dc/elements/1.1/title> "Zebrafish developmental stages" .
+<http://purl.obolibrary.org/obo/zfs> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/zfs.owl> .
+<http://purl.obolibrary.org/obo/zfs> <http://xmlns.com/foaf/0.1/homepage> <http://zfin.org/zf_info/anatomy/dict/sum.html> .
+<http://purl.obolibrary.org/obo/zfs> <http://xmlns.com/foaf/0.1/page> <http://code.google.com/p/developmental-stage-ontologies> .
+<http://purl.obolibrary.org/obo/fypo> <http://purl.org/dc/elements/1.1/description> "FYPO is a formal ontology of phenotypes observed in fission yeast. FYPO is being developed to support the comprehensive and detailed representation of phenotypes in PomBase, the new online fission yeast resource (www.pombase.org). Its scope is similar to that of the Ascomycete Phenotype Ontology (APO), but FYPO includes more detailed pre-composed terms as well as computable definitions." .
+<http://purl.obolibrary.org/obo/fypo> <http://purl.org/dc/elements/1.1/title> "Fission Yeast Phenotype Ontology" .
+<http://purl.obolibrary.org/obo/fypo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fypo.owl> .
+<http://purl.obolibrary.org/obo/fypo> <http://xmlns.com/foaf/0.1/homepage> <https://sourceforge.net/apps/trac/pombase/wiki/FissionYeastPhenotypeOntology> .
+<http://purl.obolibrary.org/obo/eo> <http://purl.org/dc/elements/1.1/description> "A structured, controlled vocabulary for the representation of plant environmental conditions." .
+<http://purl.obolibrary.org/obo/eo> <http://purl.org/dc/elements/1.1/title> "Plant Environmental Conditions" .
+<http://purl.obolibrary.org/obo/eo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/eo.owl> .
+<http://purl.obolibrary.org/obo/eo> <http://xmlns.com/foaf/0.1/homepage> <http://www.gramene.org> .
+<http://purl.obolibrary.org/obo/eo> <http://xmlns.com/foaf/0.1/page> <http://www.gramene.org/plant_ontology/index.html#eo> .
+<http://purl.obolibrary.org/obo/xco> <http://purl.org/dc/elements/1.1/description> "The Experimental Conditions Ontology is designed to represent the conditions under which physiological and morphological measurements are made both in the clinic and in studies involving humans or model organisms." .
+<http://purl.obolibrary.org/obo/xco> <http://purl.org/dc/elements/1.1/title> "Experimental condition ontology" .
+<http://purl.obolibrary.org/obo/xco> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/xco.owl> .
+<http://purl.obolibrary.org/obo/ogms> <http://purl.org/dc/elements/1.1/description> "The Ontology for General Medical Science (OGMS) is based on the papers Toward an Ontological Treatment of Disease and Diagnosis and On Carcinomas and Other Pathological Entities. The ontology attempts to address some of the issues raised at the Workshop on Ontology of Diseases (Dallas, TX) and the Signs, Symptoms, and Findings Workshop(Milan, Italy). OGMS was formerly called the clinical phenotype ontology. Terms from OGMS hang from the Basic Formal Ontology. See http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf" .
+<http://purl.obolibrary.org/obo/ogms> <http://purl.org/dc/elements/1.1/title> "Ontology for General Medical Science" .
+<http://purl.obolibrary.org/obo/ogms> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ogms.owl> .
+<http://purl.obolibrary.org/obo/ogms> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/ogms/> .
+<http://purl.obolibrary.org/obo/ogms> <http://xmlns.com/foaf/0.1/page> <http://code.google.com/p/ogms/> .
+<http://purl.obolibrary.org/obo/swo> <http://purl.org/dc/elements/1.1/title> "Software ontology" .
+<http://purl.obolibrary.org/obo/swo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/swo.owl> .
+<http://purl.obolibrary.org/obo/swo> <http://xmlns.com/foaf/0.1/homepage> <http://purl.obolibrary.org/obo/www.ebi.ac.uk/efo/swo> .
+<http://purl.obolibrary.org/obo/fma> <http://purl.org/dc/elements/1.1/description> "Obo format translation of the FMA, omitting all relationships other than is_a, part_of and has_part. Future versions of fma_obo will include more relationships" .
+<http://purl.obolibrary.org/obo/fma> <http://purl.org/dc/elements/1.1/title> "Foundational Model of Anatomy (subset)" .
+<http://purl.obolibrary.org/obo/fma> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fma.owl> .
+<http://purl.obolibrary.org/obo/fma> <http://xmlns.com/foaf/0.1/homepage> <http://sig.biostr.washington.edu/projects/fm/index.html> .
+<http://purl.obolibrary.org/obo/ehdaa2> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of stage-specific anatomical structures of the human. It has been designed to mesh with the mouse anatomy and incorporates each Carnegie stage of development (CS1-20). The abstract version of the human developmental anatomy ontology compresses all the tissues present over Carnegie stages 1-20 into a single hierarchy. The heart, for example, is present from Carnegie Stage 9 onwards and is thus represented by 12 EHDA IDs (one for each stage). In the abstract mouse, it has a single ID so that the abstract term given as just <i>heart</i> really means <i>heart (CS 9-20)</i>. Timing details will be added to the abstract version of the ontology in a future release." .
+<http://purl.obolibrary.org/obo/ehdaa2> <http://purl.org/dc/elements/1.1/title> "Human developmental anatomy, abstract version, v2" .
+<http://purl.obolibrary.org/obo/ehdaa2> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ehdaa2.owl> .
+<http://purl.obolibrary.org/obo/ehdaa2> <http://xmlns.com/foaf/0.1/homepage> <http://genex.hgu.mrc.ac.uk/> .
+<http://purl.obolibrary.org/obo/rs> <http://purl.org/dc/elements/1.1/description> "Ontology of rat strains" .
+<http://purl.obolibrary.org/obo/rs> <http://purl.org/dc/elements/1.1/title> "Rat Strain Ontology" .
+<http://purl.obolibrary.org/obo/rs> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/rs.owl> .
+<http://purl.obolibrary.org/obo/rs> <http://xmlns.com/foaf/0.1/homepage> <http://rgd.mcw.edu/> .
+<http://purl.obolibrary.org/obo/pato> <http://purl.org/dc/elements/1.1/description> "Phenotypic qualities (properties). This ontology can be used in conjunction with other ontologies such as GO or anatomical ontologies to refer to phenotypes. Examples of qualities are red, ectopic, high temperature, fused, small, edematous and arrested." .
+<http://purl.obolibrary.org/obo/pato> <http://purl.org/dc/elements/1.1/title> "Phenotypic quality" .
+<http://purl.obolibrary.org/obo/pato> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/pato.owl> .
+<http://purl.obolibrary.org/obo/pato> <http://xmlns.com/foaf/0.1/homepage> <http://obofoundry.org/wiki/index.php/PATO:Main_Page> .
+<http://purl.obolibrary.org/obo/miro> <http://purl.org/dc/elements/1.1/description> "Application ontology for entities related to insecticide resistance in mosquitos" .
+<http://purl.obolibrary.org/obo/miro> <http://purl.org/dc/elements/1.1/title> "Mosquito insecticide resistance" .
+<http://purl.obolibrary.org/obo/miro> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/miro.owl> .
+<http://purl.obolibrary.org/obo/miro> <http://xmlns.com/foaf/0.1/homepage> <http://anobase.vectorbase.org> .
+<http://purl.obolibrary.org/obo/caro> <http://purl.org/dc/elements/1.1/description> "The Common Anatomy Reference Ontology (CARO) is being developed to facilitate interoperability between existing anatomy ontologies for different species, and will provide a template for building new anatomy ontologies. CARO will be described in Anatomy Ontologies for Bioinformatics: Principles and Practice Albert Burger, Duncan Davidson and Richard Baldock (Editors)" .
+<http://purl.obolibrary.org/obo/caro> <http://purl.org/dc/elements/1.1/title> "Common Anatomy Reference Ontology" .
+<http://purl.obolibrary.org/obo/caro> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/caro.owl> .
+<http://purl.obolibrary.org/obo/caro> <http://xmlns.com/foaf/0.1/homepage> <http://www.bioontology.org/wiki/index.php/CARO:Main_Page> .
+<http://purl.obolibrary.org/obo/xao> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy and development of the African clawed frog (<i>Xenopus laevis</i>)." .
+<http://purl.obolibrary.org/obo/xao> <http://purl.org/dc/elements/1.1/title> "Xenopus anatomy and development" .
+<http://purl.obolibrary.org/obo/xao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/xao.owl> .
+<http://purl.obolibrary.org/obo/xao> <http://xmlns.com/foaf/0.1/homepage> <http://www.xenbase.org/anatomy/xao.do?method=display> .
+<http://purl.obolibrary.org/obo/po> <http://purl.org/dc/elements/1.1/description> "The Plant Ontology is a structured vocabulary and database resource that links plant anatomy, morphology and growth and development to plant genomics data. The PO is under active development to expand to encompass terms and annotations from all plants. " .
+<http://purl.obolibrary.org/obo/po> <http://purl.org/dc/elements/1.1/title> "Plant Ontology" .
+<http://purl.obolibrary.org/obo/po> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/po.owl> .
+<http://purl.obolibrary.org/obo/po> <http://xmlns.com/foaf/0.1/homepage> <http://www.plantontology.org> .
+<http://purl.obolibrary.org/obo/po> <http://xmlns.com/foaf/0.1/page> <http://www.plantontology.org/docs/docs.html> .
+<http://purl.obolibrary.org/obo/taxrank> <http://purl.org/dc/elements/1.1/description> "A vocabulary of taxonomic ranks intended to replace the sets of rank terms found in the Teleost Taxonomy Ontology, the OBO translation of the NCBI taxonomy and similar OBO taxonomy ontologies.  It provides terms for taxonomic ranks drawn from both the NCBI taxonomy database and from a rank vocabulary developed for the TDWG biodiversity information standards group.  Cross references to appearances of each term in each source are provided.  Consistent with its intended use as a vocabulary of labels, there is no relation specifying an ordering of the rank terms." .
+<http://purl.obolibrary.org/obo/taxrank> <http://purl.org/dc/elements/1.1/title> "Taxonomic rank vocabulary" .
+<http://purl.obolibrary.org/obo/taxrank> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/taxrank.owl> .
+<http://purl.obolibrary.org/obo/taxrank> <http://xmlns.com/foaf/0.1/homepage> <https://www.phenoscape.org/wiki/Taxonomic_Rank_Vocabulary> .
+<http://purl.obolibrary.org/obo/symp> <http://purl.org/dc/elements/1.1/description> "The symptom ontology was designed around the guiding concept of a symptom being: \"A perceived change in function, sensation or appearance reported by a patient indicative of a disease\". Understanding the close relationship of Signs and Symptoms, where Signs are the objective observation of an illness, the Symptom Ontology will work to broaden it's scope to capture and document in a more robust manor these two sets of terms. Understanding that at times, the same term may be both a Sign and a Symptom" .
+<http://purl.obolibrary.org/obo/symp> <http://purl.org/dc/elements/1.1/title> "Symptom Ontology" .
+<http://purl.obolibrary.org/obo/symp> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/symp.owl> .
+<http://purl.obolibrary.org/obo/symp> <http://xmlns.com/foaf/0.1/homepage> <http://symptomontologywiki.igs.umaryland.edu/wiki/index.php/Main_Page> .
+<http://purl.obolibrary.org/obo/mf> <http://purl.org/dc/elements/1.1/title> "Mental Functioning Ontology" .
+<http://purl.obolibrary.org/obo/mf> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mf.owl> .
+<http://purl.obolibrary.org/obo/mf> <http://xmlns.com/foaf/0.1/homepage> <https://code.google.com/p/mental-functioning-ontology/> .
+<http://purl.obolibrary.org/obo/opl> <http://purl.org/dc/elements/1.1/description> "The Ontology for Parasite LifeCycle (OPL) is designed to serve as a reference ontology for parasite life cycle stages. It models the life cycle stage details of various parasites, including Trypanosoma sp., Leishmania major, and Plasmodium sp., etc. In addition to life cycle stages, the ontology also models necessary contextual details, such as host information, vector information, and anatomical location" .
+<http://purl.obolibrary.org/obo/opl> <http://purl.org/dc/elements/1.1/title> "Ontology for Parasite LifeCycle" .
+<http://purl.obolibrary.org/obo/opl> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/opl.owl> .
+<http://purl.obolibrary.org/obo/opl> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/opl-ontology/> .
+<http://purl.obolibrary.org/obo/rnao> <http://purl.org/dc/elements/1.1/title> "RNA ontology" .
+<http://purl.obolibrary.org/obo/rnao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/rnao.owl> .
+<http://purl.obolibrary.org/obo/rnao> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/rnao/> .
+<http://purl.obolibrary.org/obo/pr> <http://purl.org/dc/elements/1.1/description> "PRotein Ontology (PRO) has been designed to describe the relationships of proteins and protein evolutionary classes (ontology for ProEvo), to delineate the multiple protein forms of a gene locus (ontology for protein forms), and to interconnect existing ontologies" .
+<http://purl.obolibrary.org/obo/pr> <http://purl.org/dc/elements/1.1/title> "PRotein Ontology (PRO)" .
+<http://purl.obolibrary.org/obo/pr> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/pr.owl> .
+<http://purl.obolibrary.org/obo/pr> <http://xmlns.com/foaf/0.1/homepage> <http://proconsortium.org> .
+<http://purl.obolibrary.org/obo/pr> <http://xmlns.com/foaf/0.1/page> <ftp://ftp.pir.georgetown.edu/databases/ontology/pro_obo/pro_readme.txt> .
+<http://purl.obolibrary.org/obo/doid> <http://purl.org/dc/elements/1.1/description> "Creating a comprehensive hierarchical controlled vocabulary for human disease representation." .
+<http://purl.obolibrary.org/obo/doid> <http://purl.org/dc/elements/1.1/title> "Human disease ontology" .
+<http://purl.obolibrary.org/obo/doid> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/doid.owl> .
+<http://purl.obolibrary.org/obo/doid> <http://xmlns.com/foaf/0.1/homepage> <http://diseaseontology.sourceforge.net/> .
+<http://purl.obolibrary.org/obo/doid> <http://xmlns.com/foaf/0.1/page> <http://diseaseontology.sourceforge.net/> .
+<http://purl.obolibrary.org/obo/ovao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ovao.owl> .
+<http://purl.obolibrary.org/obo/wbls> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the development of <i>Caenorhabditis elegans</i>." .
+<http://purl.obolibrary.org/obo/wbls> <http://purl.org/dc/elements/1.1/title> "C. elegans development" .
+<http://purl.obolibrary.org/obo/wbls> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/wbls.owl> .
+<http://purl.obolibrary.org/obo/wbls> <http://xmlns.com/foaf/0.1/homepage> <http://www.wormbase.org/> .
+<http://purl.obolibrary.org/obo/mpath> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of mutant and transgenic mouse pathology phenotypes" .
+<http://purl.obolibrary.org/obo/mpath> <http://purl.org/dc/elements/1.1/title> "Mouse pathology" .
+<http://purl.obolibrary.org/obo/mpath> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mpath.owl> .
+<http://purl.obolibrary.org/obo/mpath> <http://xmlns.com/foaf/0.1/homepage> <http://www.pathbase.net> .
+<http://purl.obolibrary.org/obo/mp> <http://purl.org/dc/elements/1.1/description> "The Mammalian Phenotype Ontology is under development as a community effort to provide standard terms for annotating mammalian phenotypic data." .
+<http://purl.obolibrary.org/obo/mp> <http://purl.org/dc/elements/1.1/title> "Mammalian phenotype" .
+<http://purl.obolibrary.org/obo/mp> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mp.owl> .
+<http://purl.obolibrary.org/obo/mp> <http://xmlns.com/foaf/0.1/homepage> <http://www.informatics.jax.org/searches/MP_form.shtml> .
+<http://purl.obolibrary.org/obo/bfo> <http://purl.org/dc/elements/1.1/description> "BFO grows out of a philosophical orientation which overlaps with that of DOLCE and SUMO. Unlike these, however, it is narrowly focused on the task of providing a genuine upper ontology which can be used in support of domain ontologies developed for scientific research, as for example in biomedicine within the framework of the OBO Foundry. Thus BFO does not contain physical, chemical, biological or other terms which would properly fall within the special sciences domains. BFO is the upper level ontology upon which OBO Foundry ontologies are built." .
+<http://purl.obolibrary.org/obo/bfo> <http://purl.org/dc/elements/1.1/title> "Basic Formal Ontology" .
+<http://purl.obolibrary.org/obo/bfo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/bfo.owl> .
+<http://purl.obolibrary.org/obo/bfo> <http://xmlns.com/foaf/0.1/homepage> <http://ifomis.org/bfo/> .
+<http://purl.obolibrary.org/obo/bfo> <http://xmlns.com/foaf/0.1/page> <http://ifomis.org/bfo/> .
+<http://purl.obolibrary.org/obo/vsao> <http://purl.org/dc/elements/1.1/description> "Vertebrate skeletal anatomy ontology. " .
+<http://purl.obolibrary.org/obo/vsao> <http://purl.org/dc/elements/1.1/title> "Vertebrate Skeletal Anatomy Ontology" .
+<http://purl.obolibrary.org/obo/vsao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/vsao.owl> .
+<http://purl.obolibrary.org/obo/vsao> <http://xmlns.com/foaf/0.1/homepage> <https://www.nescent.org/phenoscape/Main_Page> .
+<http://purl.obolibrary.org/obo/vsao> <http://xmlns.com/foaf/0.1/page> <https://www.phenoscape.org/wiki/Skeletal_Anatomy_Jamboree> .
+<http://purl.obolibrary.org/obo/to> <http://purl.org/dc/elements/1.1/description> "A controlled vocabulary of describe phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." .
+<http://purl.obolibrary.org/obo/to> <http://purl.org/dc/elements/1.1/title> "Plant Trait Ontology" .
+<http://purl.obolibrary.org/obo/to> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/to.owl> .
+<http://purl.obolibrary.org/obo/to> <http://xmlns.com/foaf/0.1/homepage> <http://www.gramene.org/plant_ontology/> .
+<http://purl.obolibrary.org/obo/to> <http://xmlns.com/foaf/0.1/page> <http://www.gramene.org/plant_ontology/index.html#to> .
+<http://purl.obolibrary.org/obo/nbo> <http://purl.org/dc/elements/1.1/title> "Neuro Behavior Ontology" .
+<http://purl.obolibrary.org/obo/nbo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/nbo.owl> .
+<http://purl.obolibrary.org/obo/nbo> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/behavior-ontology> .
+<http://purl.obolibrary.org/obo/hao> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy of the Hymenoptera (bees, wasps, and ants)" .
+<http://purl.obolibrary.org/obo/hao> <http://purl.org/dc/elements/1.1/title> "Hymenoptera Anatomy Ontology" .
+<http://purl.obolibrary.org/obo/hao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/hao.owl> .
+<http://purl.obolibrary.org/obo/hao> <http://xmlns.com/foaf/0.1/homepage> <http://hymao.org> .
+<http://purl.obolibrary.org/obo/pw> <http://purl.org/dc/elements/1.1/description> "The Pathway Ontology is a controlled vocabulary for pathways that provides standard terms for the annotation of gene products. The Pathway Ontology is under development at <a href=\"http://rgd.mcw.edu\">Rat Genome Database</a>." .
+<http://purl.obolibrary.org/obo/pw> <http://purl.org/dc/elements/1.1/title> "Pathway ontology" .
+<http://purl.obolibrary.org/obo/pw> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/pw.owl> .
+<http://purl.obolibrary.org/obo/pw> <http://xmlns.com/foaf/0.1/homepage> <http://rgd.mcw.edu/tools/ontology/ont_search.cgi> .
+<http://purl.obolibrary.org/obo/pw> <http://xmlns.com/foaf/0.1/page> <ftp://rgd.mcw.edu/pub/data_release/PW_Introduction.doc> .
+<http://purl.obolibrary.org/obo/tads> <http://purl.org/dc/elements/1.1/description> "The anatomy of the Tick, <i>Families: Ixodidae, Argassidae</i>" .
+<http://purl.obolibrary.org/obo/tads> <http://purl.org/dc/elements/1.1/title> "Tick gross anatomy" .
+<http://purl.obolibrary.org/obo/tads> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/tads.owl> .
+<http://purl.obolibrary.org/obo/tads> <http://xmlns.com/foaf/0.1/homepage> <http://anobase.vectorbase.org> .
+<http://purl.obolibrary.org/obo/nmr> <http://purl.org/dc/elements/1.1/description> "Descriptors relevant to the experimental conditions of the Nuclear Magnetic Resonance (NMR) component in a metabolomics investigation." .
+<http://purl.obolibrary.org/obo/nmr> <http://purl.org/dc/elements/1.1/title> "NMR-instrument specific component of metabolomics investigations" .
+<http://purl.obolibrary.org/obo/nmr> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/nmr.owl> .
+<http://purl.obolibrary.org/obo/nmr> <http://xmlns.com/foaf/0.1/homepage> <http://msi-ontology.sourceforge.net/> .
+<http://purl.obolibrary.org/obo/nmr> <http://xmlns.com/foaf/0.1/page> <http://msi-ontology.sourceforge.net/ontology/NMR.owlDocument.doc> .
+<http://purl.obolibrary.org/obo/mod> <http://purl.org/dc/elements/1.1/description> "PSI-MOD is an ontology consisting of terms that describe protein chemical modifications, logically linked by an is_a relationship in such a way as to form a direct acyclic graph (DAG). The PSI-MOD ontology has more than 45 top-level nodes, and provides alternative hierarchical paths for classifying protein modifications either by the molecular structure of the modification, or by the amino acid residue that is modified." .
+<http://purl.obolibrary.org/obo/mod> <http://purl.org/dc/elements/1.1/title> "Protein modification" .
+<http://purl.obolibrary.org/obo/mod> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mod.owl> .
+<http://purl.obolibrary.org/obo/mod> <http://xmlns.com/foaf/0.1/homepage> <http://psidev.info/index.php?q=node/104> .
+<http://purl.obolibrary.org/obo/mod> <http://xmlns.com/foaf/0.1/page> <http://psidev.info/index.php?q=node/104> .
+<http://purl.obolibrary.org/obo/fbbi> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of sample preparation, visualization and imaging methods used in biomedical research." .
+<http://purl.obolibrary.org/obo/fbbi> <http://purl.org/dc/elements/1.1/title> "Biological imaging methods" .
+<http://purl.obolibrary.org/obo/fbbi> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fbbi.owl> .
+<http://purl.obolibrary.org/obo/fbbi> <http://xmlns.com/foaf/0.1/homepage> <http://cellimagelibrary.org/> .
+<http://purl.obolibrary.org/obo/mirnao> <http://purl.org/dc/elements/1.1/description> "microRNA Ontology (miRNAO) is an application ontology and it has been developed in order to drive miRNA databases." .
+<http://purl.obolibrary.org/obo/mirnao> <http://purl.org/dc/elements/1.1/title> "microRNA Ontology" .
+<http://purl.obolibrary.org/obo/mirnao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mirnao.owl> .
+<http://purl.obolibrary.org/obo/mirnao> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/mirna-ontology/> .
+<http://purl.obolibrary.org/obo/uberon-basic> <http://purl.org/dc/elements/1.1/description> "Basic version of complete uberon ontology - excludes logical definitions, disjointness axioms, external ontologies and all relations other than is_a, part_of and develops_from" .
+<http://purl.obolibrary.org/obo/uberon-basic> <http://purl.org/dc/elements/1.1/title> "Uber anatomy ontology, basic version" .
+<http://purl.obolibrary.org/obo/uberon-basic> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/uberon-basic.owl> .
+<http://purl.obolibrary.org/obo/uberon-basic> <http://xmlns.com/foaf/0.1/homepage> <http://uberon.org> .
+<http://purl.obolibrary.org/obo/uberon-basic> <http://xmlns.com/foaf/0.1/page> <http://uberon.org> .
+<http://purl.obolibrary.org/obo/xso> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/xso.owl> .
+<http://purl.obolibrary.org/obo/eco> <http://purl.org/dc/elements/1.1/description> "A rich ontology for experimental and other evidence statements." .
+<http://purl.obolibrary.org/obo/eco> <http://purl.org/dc/elements/1.1/title> "Evidence codes" .
+<http://purl.obolibrary.org/obo/eco> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/eco.owl> .
+<http://purl.obolibrary.org/obo/ero> <http://purl.org/dc/elements/1.1/description> "ERO models research resources such instruments. protocols, reagents, animal models and biospecimens. It has been developed in the context of the eagle-i project  (http://eagle-i.net/)." .
+<http://purl.obolibrary.org/obo/ero> <http://purl.org/dc/elements/1.1/title> "eagle-i resource ontology" .
+<http://purl.obolibrary.org/obo/ero> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ero.owl> .
+<http://purl.obolibrary.org/obo/ero> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/eagle-i/> .
+<http://purl.obolibrary.org/obo/ero> <http://xmlns.com/foaf/0.1/page> <http://code.google.com/p/eagle-i/wiki/Documentation> .
+<http://purl.obolibrary.org/obo/envo> <http://purl.org/dc/elements/1.1/description> "Ontology of environmental features and habitats" .
+<http://purl.obolibrary.org/obo/envo> <http://purl.org/dc/elements/1.1/title> "Environment Ontology" .
+<http://purl.obolibrary.org/obo/envo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/envo.owl> .
+<http://purl.obolibrary.org/obo/envo> <http://xmlns.com/foaf/0.1/homepage> <http://environmentontology.org/> .
+<http://purl.obolibrary.org/obo/envo> <http://xmlns.com/foaf/0.1/page> <http://environmentontology.org/> .
+<http://purl.obolibrary.org/obo/dron> <http://purl.org/dc/elements/1.1/description> "We built this ontology primarily to support comparative effectiveness researchers studying claims data. They need to be able to query U.S. National Drug Codes (NDCs) by ingredient, mechanism of action (beta-adrenergic blockade), physiological effect (diuresis), and therapeutic intent (anti-hypertensive)." .
+<http://purl.obolibrary.org/obo/dron> <http://purl.org/dc/elements/1.1/title> "The Drug Ontology" .
+<http://purl.obolibrary.org/obo/dron> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/dron.owl> .
+<http://purl.obolibrary.org/obo/dron> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/dr-on> .
+<http://purl.obolibrary.org/obo/omrse> <http://purl.org/dc/elements/1.1/description> "This ontology covers the domain of social entities that are related to health care, such as demographic information (social entities for recording gender (but not sex) and marital status, for example) and the roles of various individuals and organizations (patient, hospital,etc.)" .
+<http://purl.obolibrary.org/obo/omrse> <http://purl.org/dc/elements/1.1/title> "Ontology of Medically Related Social Entities" .
+<http://purl.obolibrary.org/obo/omrse> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/omrse.owl> .
+<http://purl.obolibrary.org/obo/omrse> <http://xmlns.com/foaf/0.1/page> <http://code.google.com/p/omrse/> .
+<http://purl.obolibrary.org/obo/oae> <http://purl.org/dc/elements/1.1/description> "The Ontology of Adverse Events (OAE) is a biomedical ontology in the domain of adverse events. OAE aims to standardize adverse event annotation, integrate various adverse event data, and support computer-assisted reasoning.  OAE is a community-based ontology. Its development follows the OBO Foundry principles. " .
+<http://purl.obolibrary.org/obo/oae> <http://purl.org/dc/elements/1.1/title> "Ontology of Adverse Events" .
+<http://purl.obolibrary.org/obo/oae> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/oae.owl> .
+<http://purl.obolibrary.org/obo/oae> <http://xmlns.com/foaf/0.1/homepage> <http://www.oae-ontology.org> .
+<http://purl.obolibrary.org/obo/so> <http://purl.org/dc/elements/1.1/description> "The Sequence Ontology provides a structured controlled vocabulary for sequence annotation, for the exchange of annotation data and for the description of sequence objects in databases. <a href=\"http://obo.cvs.sourceforge.net/*checkout*/song/ontology/sofa.obo\">SOFA</a> is a minimal version of SO for use in data exchange." .
+<http://purl.obolibrary.org/obo/so> <http://purl.org/dc/elements/1.1/title> "Sequence types and features" .
+<http://purl.obolibrary.org/obo/so> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/so.owl> .
+<http://purl.obolibrary.org/obo/so> <http://xmlns.com/foaf/0.1/homepage> <http://song.sourceforge.net/> .
+<http://purl.obolibrary.org/obo/exo> <http://purl.org/dc/elements/1.1/description> "Significant progress has been made over the last several years in collecting and improving access to genomic, toxicology, and health data to promote understanding about environmental influences on human health.  The resulting information resources, however, lack extensive and reliable exposure data, which are required to translate molecular insights, elucidate environmental contributions to diseases, and assess human health risks at the individual and population levels.  We report our development of an Exposure Ontology, ExO, designed to address this information gap by facilitating centralization and integration of exposure data to inform understanding of environmental health. Like other widely used ontologies, ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics" .
+<http://purl.obolibrary.org/obo/exo> <http://purl.org/dc/elements/1.1/title> "Exposure ontology" .
+<http://purl.obolibrary.org/obo/exo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/exo.owl> .
+<http://purl.obolibrary.org/obo/exo> <http://xmlns.com/foaf/0.1/homepage> <http://ctdbase.org/downloads/#exposures> .
+<http://purl.obolibrary.org/obo/exo> <http://xmlns.com/foaf/0.1/page> <http://ctdbase.org/downloads/#exposures> .
+<http://purl.obolibrary.org/obo/hom> <http://purl.org/dc/elements/1.1/description> "This ontology represents concepts related to homology, as well as other concepts used to describe similarity and non-homology." .
+<http://purl.obolibrary.org/obo/hom> <http://purl.org/dc/elements/1.1/title> "homology_ontology" .
+<http://purl.obolibrary.org/obo/hom> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/hom.owl> .
+<http://purl.obolibrary.org/obo/hom> <http://xmlns.com/foaf/0.1/homepage> <http://bioinfo.unil.ch> .
+<http://purl.obolibrary.org/obo/fao> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary for the anatomy of fungi." .
+<http://purl.obolibrary.org/obo/fao> <http://purl.org/dc/elements/1.1/title> "Fungal gross anatomy" .
+<http://purl.obolibrary.org/obo/fao> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fao.owl> .
+<http://purl.obolibrary.org/obo/fao> <http://xmlns.com/foaf/0.1/homepage> <http://www.yeastgenome.org/fungi/fungal_anatomy_ontology/> .
+<http://purl.obolibrary.org/obo/fao> <http://xmlns.com/foaf/0.1/page> <http://www.yeastgenome.org/fungi/fungal_anatomy_ontology/#description> .
+<http://purl.obolibrary.org/obo/ogsf> <http://purl.org/dc/elements/1.1/description> "Ontology for Genetic Susceptibility Factor (OGSF) is an application ontology to model/represent the notion of genetic susceptibility to a specific disease or an adverse event or a pathological biological process. It is developed using BFO2.0's framwork. The ontology is under the domain of genetic epidemiology." .
+<http://purl.obolibrary.org/obo/ogsf> <http://purl.org/dc/elements/1.1/title> "Ontology of Genetic Susceptibility Factor" .
+<http://purl.obolibrary.org/obo/ogsf> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ogsf.owl> .
+<http://purl.obolibrary.org/obo/ogsf> <http://xmlns.com/foaf/0.1/homepage> <https://code.google.com/p/ogsf/> .
+<http://purl.obolibrary.org/obo/mfoem> <http://purl.org/dc/elements/1.1/description> "An ontology of affective phenomena such as emotions, moods, appraisals and subjective feelings, designed to support interdisciplinary research by providing unified annotations." .
+<http://purl.obolibrary.org/obo/mfoem> <http://purl.org/dc/elements/1.1/title> "Emotion Ontology" .
+<http://purl.obolibrary.org/obo/mfoem> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mfoem.owl> .
+<http://purl.obolibrary.org/obo/mfoem> <http://xmlns.com/foaf/0.1/homepage> <https://code.google.com/p/emotion-ontology/> .
+<http://purl.obolibrary.org/obo/aeo> <http://purl.org/dc/elements/1.1/description> "AEO is an ontology of anatomical structures that expands CARO, the Common Anatomy Reference Ontology, to about 200 classes using the is_a relationship; it thus provides a detailed type classification for tissues. The new classes were chosen for their use in categorizing the major vertebrate and invertebrate anatomy ontologies at a granularity adequate for tissues of a single cell type. The ontology should be useful in increasing the amount of knowledge in anatomy ontologies, facilitating annotation and enabling interoperability across anatomy ontologies" .
+<http://purl.obolibrary.org/obo/aeo> <http://purl.org/dc/elements/1.1/title> "Anatomical Entity Ontology" .
+<http://purl.obolibrary.org/obo/aeo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/aeo.owl> .
+<http://purl.obolibrary.org/obo/aeo> <http://xmlns.com/foaf/0.1/homepage> <http://www.obofoundry.org/wiki/index.php/AEO:Main_Page> .
+<http://purl.obolibrary.org/obo/tgma> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy of mosquitoes." .
+<http://purl.obolibrary.org/obo/tgma> <http://purl.org/dc/elements/1.1/title> "Mosquito gross anatomy" .
+<http://purl.obolibrary.org/obo/tgma> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/tgma.owl> .
+<http://purl.obolibrary.org/obo/tgma> <http://xmlns.com/foaf/0.1/homepage> <http://anobase.vectorbase.org> .
+<http://purl.obolibrary.org/obo/ddanat> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy of the slime-mould <i>Dictyostelium discoideum</i>." .
+<http://purl.obolibrary.org/obo/ddanat> <http://purl.org/dc/elements/1.1/title> "Dictyostelium discoideum anatomy" .
+<http://purl.obolibrary.org/obo/ddanat> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/ddanat.owl> .
+<http://purl.obolibrary.org/obo/ddanat> <http://xmlns.com/foaf/0.1/homepage> <http://dictybase.org/> .
+<http://purl.obolibrary.org/obo/vhog> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/vhog.owl> .
+<http://purl.obolibrary.org/obo/zfa> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy and development of the Zebrafish (<i>Danio rerio</i>)." .
+<http://purl.obolibrary.org/obo/zfa> <http://purl.org/dc/elements/1.1/title> "Zebrafish anatomy and development" .
+<http://purl.obolibrary.org/obo/zfa> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/zfa.owl> .
+<http://purl.obolibrary.org/obo/zfa> <http://xmlns.com/foaf/0.1/homepage> <http://zfin.org/zf_info/anatomy/dict/sum.html> .
+<http://purl.obolibrary.org/obo/obi> <http://purl.org/dc/elements/1.1/description> "OBI models the design of an investigation, the protocols and instrumentation used, the material used, the data generated and the type analysis performed on it. This project was formerly titled the Functional Genomics Investigation Ontology (FuGO) project." .
+<http://purl.obolibrary.org/obo/obi> <http://purl.org/dc/elements/1.1/title> "Ontology for biomedical investigations" .
+<http://purl.obolibrary.org/obo/obi> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/obi> <http://xmlns.com/foaf/0.1/homepage> <http://purl.obofoundry.org/obo/obi> .
+<http://purl.obolibrary.org/obo/obi> <http://xmlns.com/foaf/0.1/page> <http://obi-ontology.org/page/Technical_Reports> .
+<http://purl.obolibrary.org/obo/resid> <http://purl.org/dc/elements/1.1/description> "For the description of covalent bonds in proteins." .
+<http://purl.obolibrary.org/obo/resid> <http://purl.org/dc/elements/1.1/title> "Protein covalent bond" .
+<http://purl.obolibrary.org/obo/resid> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/resid.owl> .
+<http://purl.obolibrary.org/obo/resid> <http://xmlns.com/foaf/0.1/homepage> <http://www.ebi.ac.uk/RESID/> .
+<http://purl.obolibrary.org/obo/wbbt> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy of <i>Caenorhabditis elegans</i>." .
+<http://purl.obolibrary.org/obo/wbbt> <http://purl.org/dc/elements/1.1/title> "C. elegans gross anatomy" .
+<http://purl.obolibrary.org/obo/wbbt> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/wbbt.owl> .
+<http://purl.obolibrary.org/obo/wbbt> <http://xmlns.com/foaf/0.1/homepage> <http://www.wormbase.org/> .
+<http://purl.obolibrary.org/obo/mamo> <http://purl.org/dc/elements/1.1/description> "The Mathematical Modelling Ontology (MAMO) is a classification of the types of mathematical models used mostly in the life sciences, their variables, relationships and other relevant features." .
+<http://purl.obolibrary.org/obo/mamo> <http://purl.org/dc/elements/1.1/title> "Mathematical modeling ontology" .
+<http://purl.obolibrary.org/obo/mamo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mamo.owl> .
+<http://purl.obolibrary.org/obo/mamo> <http://xmlns.com/foaf/0.1/homepage> <http://sourceforge.net/projects/mamo-ontology/> .
+<http://purl.obolibrary.org/obo/spd> <http://purl.org/dc/elements/1.1/description> "An ontology for spider comparative biology including anatomical parts (e.g. leg, claw), behavior (e.g. courtship, combing) and products (i.g. silk, web, borrow)." .
+<http://purl.obolibrary.org/obo/spd> <http://purl.org/dc/elements/1.1/title> "Spider Ontology" .
+<http://purl.obolibrary.org/obo/spd> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/spd.owl> .
+<http://purl.obolibrary.org/obo/spd> <http://xmlns.com/foaf/0.1/homepage> <http://research.amnh.org/atol/files/> .
+<http://purl.obolibrary.org/obo/idomal> <http://purl.org/dc/elements/1.1/description> "An application ontology to cover all aspects of malaria (clinical, epidemiological, biological, etc) as well as the intervention attempts to control it." .
+<http://purl.obolibrary.org/obo/idomal> <http://purl.org/dc/elements/1.1/title> "Malaria Ontology" .
+<http://purl.obolibrary.org/obo/idomal> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/idomal.owl> .
+<http://purl.obolibrary.org/obo/idomal> <http://xmlns.com/foaf/0.1/homepage> <http://anobase.vectorbase.org> .
+<http://purl.obolibrary.org/obo/mfo> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary of the anatomy and development of the Japanese medaka fish, <i>Oryzias latipes</i>." .
+<http://purl.obolibrary.org/obo/mfo> <http://purl.org/dc/elements/1.1/title> "Medaka fish anatomy and development" .
+<http://purl.obolibrary.org/obo/mfo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/mfo.owl> .
+<http://purl.obolibrary.org/obo/bcgo> <http://purl.org/dc/elements/1.1/description> "The Beta Cell Genomics Ontology (BCGO) is an application ontology built for the beta cell genomics studies aiming to support database annotation, complicated semantic queries, and automated cell type classification. The ontology is developed using Basic Formal Ontology (BFO) as upper " .
+<http://purl.obolibrary.org/obo/bcgo> <http://purl.org/dc/elements/1.1/title> "Beta Cell Genomics Ontology" .
+<http://purl.obolibrary.org/obo/bcgo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/bcgo.owl> .
+<http://purl.obolibrary.org/obo/bcgo> <http://xmlns.com/foaf/0.1/homepage> <http://code.google.com/p/bcgo-ontology/> .
+<http://purl.obolibrary.org/obo/bcgo> <http://xmlns.com/foaf/0.1/page> <http://code.google.com/p/bcgo-ontology/> .
+<http://purl.obolibrary.org/obo/sep> <http://purl.org/dc/elements/1.1/description> "A structured controlled vocabulary for the annotation of sample processing and separation techniques in scientific experiments, such as, and including, gel electrophoresis, column chromatography, capillary electrophoresis, centrifugation and so on. Developed jointly by the HUPO Proteomics Standards Initiative and The Metabolomics Standards Initiative." .
+<http://purl.obolibrary.org/obo/sep> <http://purl.org/dc/elements/1.1/title> "Sample processing and separation techniques" .
+<http://purl.obolibrary.org/obo/sep> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/sep.owl> .
+<http://purl.obolibrary.org/obo/sep> <http://xmlns.com/foaf/0.1/homepage> <http://psidev.info/index.php?q=node/312> .
+<http://purl.obolibrary.org/obo/sep> <http://xmlns.com/foaf/0.1/page> <http://psidev.info/index.php?q=node/312> .
+<http://purl.obolibrary.org/obo/miapa> <http://purl.org/dc/elements/1.1/description> "The MIAPA ontology is an application ontology to formalize annotation of phylogenetic data according to the emerging Minimum Information About a Phylogenetic Analysis (MIAPA) metadata reporting standard." .
+<http://purl.obolibrary.org/obo/miapa> <http://purl.org/dc/elements/1.1/title> "MIAPA Ontology" .
+<http://purl.obolibrary.org/obo/miapa> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/miapa.owl> .
+<http://purl.obolibrary.org/obo/miapa> <http://xmlns.com/foaf/0.1/homepage> <http://www.evoio.org/wiki/MIAPA> .
+<http://purl.obolibrary.org/obo/fbsp> <http://purl.org/dc/elements/1.1/description> "The taxonomy of the family <i>Drosophilidae</i> (largely after Baechli) and of other taxa referred to in FlyBase." .
+<http://purl.obolibrary.org/obo/fbsp> <http://purl.org/dc/elements/1.1/title> "Fly taxonomy" .
+<http://purl.obolibrary.org/obo/fbsp> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/fbsp.owl> .
+<http://purl.obolibrary.org/obo/fbsp> <http://xmlns.com/foaf/0.1/homepage> <http://www.flybase.org/> .
+<http://purl.obolibrary.org/obo/cvdo> <http://purl.org/dc/elements/1.1/description> "CVDO is an ontology based on the OGMS model of disease, designed to describe entities related to cardiovascular diseases (including the diseases themselves, the underlying disorders, and the related pathological processes). It is being developed at the INSERM research institute (Institut National de la Santé et de la Recherche Médicale)." .
+<http://purl.obolibrary.org/obo/cvdo> <http://purl.org/dc/elements/1.1/title> "Cardiovascular Disease Ontology" .
+<http://purl.obolibrary.org/obo/cvdo> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/cvdo.owl> .
+<http://purl.obolibrary.org/obo/cvdo> <http://xmlns.com/foaf/0.1/homepage> <https://code.google.com/p/cvdo/> .
+<http://purl.obolibrary.org/obo/tto> <http://purl.org/dc/elements/1.1/description> "The Teleost taxonomy ontology is being used to facilitate annotation of phenotypes, particularly for taxa that are not covered by NCBI because no submissions of molecular data have been made. Taxonomy ontologies can also be valuable in annotating legacy data, where authors make phenotype or ecological assertions (e.g., host-parasite associations) that refer to groups that are reorganized or no longer recognized. The taxonomy ontology serves as the source of taxa for our project's use for identifying evolutionary changes that match the phenotype of a zebrafish mutant." .
+<http://purl.obolibrary.org/obo/tto> <http://purl.org/dc/elements/1.1/title> "Teleost taxonomy" .
+<http://purl.obolibrary.org/obo/tto> <http://rdfs.org/ns/void#subset> <http://purl.obolibrary.org/obo/tto.owl> .
+<http://purl.obolibrary.org/obo/tto> <http://xmlns.com/foaf/0.1/homepage> <https://www.nescent.org/phenoscape/Main_Page> .

@@ -19,8 +19,10 @@ Latest version may or may not be deployed on heroku
 
  * doesn't suck
  * correctly models distinction between an ontology and the subsets/artefacts it produces
+ * partial support for notion of sub-ontology, e.g. d-acts
  * supports various other metadata tags, including twitter feeds, publications, ...
  * social - integration with twitter
+ * doesn't suck
 
 ## Repository metadata
 
@@ -85,7 +87,7 @@ above, in order (proxyPass may also be an option). E.g.
 
 Class URIs automatically get redirected to OntoBee
 
- * enigmatic-wildwood-5530.herokuapp.com/obo/UBERON_0000955
+ * http://enigmatic-wildwood-5530.herokuapp.com/obo/UBERON_0000955
 
 It would be trivial to implemented overrides (e.g. for PR). TODO.
 

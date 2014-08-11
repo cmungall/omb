@@ -36,8 +36,15 @@ addTags = function(ontology) {
             ontology.citations_pubmed = "http://www.ncbi.nlm.nih.gov/pubmed?linkname=pubmed_pubmed&from_uid=" + m[1];
         }
     }
+    if (ontology.products == null) {
+        ontology.products = [
+            {
+                id: ontology.id + ".owl"
+            }
+        ]
+    }
     ontology.prefix = ontology.id.toUpperCase();
-    console.log("TODO - set this else where. Prefix = "+ontology.prefix);
+    //console.log("TODO - set this else where. Prefix = "+ontology.prefix);
 
 }
 
@@ -45,10 +52,26 @@ exports.list = function(req, res){
     var repository = req.repository;
     //console.log(req);
 
-    // TODO - do this separately
-    repository.ontologies.forEach(addTags);
+    var ontologies = [];
+    for (var k in repository.ontologies) {
+        var ont = repository.ontologies[k];
+        // TODO - do this separately
+        addTags(ont);
+        ontologies.push(ont);
+        for (var j in ont.products) {
+            var subont = ont.products[j];
+            // TODO: decide on criterion - for now if the ontology has a contact
+            // elevate this to sub-ontology
+            if (subont.contact) {
+                console.log("SUBONT: "+subont.id);
+                ontologies.push(subont);
+                subont.is_nested = true;
+            }
+        }
+    }
+
     res.render('ontologies', { repository: repository,
-                               ontologies: repository.ontologies });
+                               ontologies: ontologies });
 };
 
 exports.info = function(req, res){

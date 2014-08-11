@@ -5,7 +5,8 @@
   owl: http://www.w3.org/2002/07/owl#
   xsd: http://www.w3.org/2001/XMLSchema#
   dc: http://purl.org/dc/terms/
-  dcterms: http://purl.org/dc/terms/
+  dce: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/1.1/
   faldo: http://biohackathon.org/resource/faldo#
   foaf: http://xmlns.com/foaf/0.1/
   oa: http://www.w3.org/ns/oa#
@@ -16,9 +17,9 @@
   id: "@id"
   label: rdfs:label
   comment: rdfs:comment
-  description: dc:description
-  source: dc:source
-  publisher: dc:publisher
+  description: dce:description
+  source: dce:source
+  publisher: dce:publisher
   mailing_list: doap:mailing-list
   
   Class: owl:Class
@@ -29,34 +30,34 @@
     "@id": rdf:type
     "@type": "@id"
   created: 
-    "@id": dc:created
+    "@id": dcterms:created
     "@type": xsd:dateTime
   creator: 
-    "@id": dc:creator
+    "@id": dcterms:creator
     "@type": "@id"
   depiction: 
     "@id": foaf:depiction
     "@type": "@id"
-  publication: dc:publication
-  source: dc:source
+  publication: dcterms:publication
+  source: dce:source
   subClassOf: owl:subClassOf
-  title: dc:title
+  title: dce:title
   homepage: 
     "@id": foaf:homepage
     "@type": "@id"
   page: 
     "@id": foaf:page
     "@type": "@id"
-  ontologies: rdfs:seeAlso
+  ontologies: dcterms:hasPart
     
 
 ## ----------------------------------------
 ## BUSINESS STARTS HERE
 ## ----------------------------------------
   
-id: http://monarchinitiative.org
-title: Monarch Ontologies
-description: "A subset of the OBO Library of intrest to The Monarch project and GO"
+id: http://obolibrary.org
+title: OBO Library VERY EXPERIMENTAL BROWSER
+description: "A set of ontology libraries for doing useful stuff. This is a demo, DO NOT TRUST ANY INFO YOU SEE HERE"
 
 ontologies:
 
@@ -165,6 +166,7 @@ ontologies:
     label: GO
     title: Gene Ontology
     twitter: news4go
+    tracker: http://sourceforge.net/p/geneontology/ontology-requests/
     dependencies:
      - id: uberon
        subset: go/extensions/uberon_import.owl
@@ -181,6 +183,8 @@ ontologies:
   - id: cl
     label: Cell Ontology
     title: Cell Ontology
+    tracker: https://code.google.com/p/cell-ontology/issues/list
+    mailing_list: https://lists.sourceforge.net/lists/listinfo/obo-cell-type
     dependencies:
      - id: uberon
      - id: go
@@ -193,8 +197,11 @@ ontologies:
   - id: ro
     title: Relations Ontology
     canonical: ro.owl
+    tracker: https://code.google.com/p/obo-relations/issues/list
+    mailing_list: https://lists.sourceforge.net/lists/listinfo/obo-relations
     products:
      - id: ro.owl
+     - id: ro.obo
 
   - 
     id: ncbitaxon
@@ -211,8 +218,34 @@ ontologies:
       - id: ncbitaxon.owl
       - id: ncbitaxon/subsets/taxslim.owl
 
-## PASTE OTHERS HERE
 
+
+  - 
+    id: iao
+    contact: 
+      email: alanruttenberg@gmail.com
+      label: Alan Ruttenberg
+    description: "The Information Artifact Ontology (IAO) is a new ontology of information entities, originally driven by work by the OBI digital entity and realizable information entity branch. "
+    domain: information
+    homepage: http://purl.obolibrary.org/obo/iao
+    page: http://code.google.com/p/information-artifact-ontology/
+    products: 
+      - id: iao.owl
+
+      - id: iao/d-acts.owl
+        title: ontology of document acts
+        description: "An ontology based on a theory of document acts describing what people can do with documents"
+        contact: 
+          email: mbrochhausen@gmail.com
+          label: Mathias Brochhausen
+
+    title: Information Artifact Ontology
+    tracker: http://code.google.com/p/information-artifact-ontology/issues/list
+
+
+
+## PASTE OTHERS HERE
+  -
     contact: 
       email: balhoff@nescent.org
       label: Jim Balhoff
@@ -339,7 +372,7 @@ ontologies:
       label: Mathias Brochhausen
     homepage: https://code.google.com/p/ge-ontology/
     id: geo
-    page: An ontology of geographical entities implemented in Web Ontology Language 2 (OWL2) and based on Basic Formal Ontology (BFO). The developers aim to adhere to the OBO Foundry principles.
+    description: An ontology of geographical entities implemented in Web Ontology Language 2 (OWL2) and based on Basic Formal Ontology (BFO). The developers aim to adhere to the OBO Foundry principles.
     products: 
       - 
         id: geo.owl
@@ -715,20 +748,6 @@ ontologies:
       id: NCBITaxon:10088
       label: Mus
     title: Mouse gross anatomy and development, abstract
-  - 
-    contact: 
-      email: alanruttenberg@gmail.com
-      label: Alan Ruttenberg
-    description: "The Information Artifact Ontology (IAO) is a new ontology of information entities, originally driven by work by the OBI digital entity and realizable information entity branch. "
-    domain: information
-    homepage: http://purl.obolibrary.org/obo/iao
-    id: iao
-    page: http://code.google.com/p/information-artifact-ontology/
-    products: 
-      - 
-        id: iao.owl
-    title: Information Artifact Ontology
-    tracker: http://code.google.com/p/information-artifact-ontology/issues/list
   - 
     contact: 
       email: yongqunh@med.umich.edu

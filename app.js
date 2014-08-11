@@ -32,7 +32,7 @@ var fs   = require('fs');
 var repositoryBase = "data/repository";
 try {
     repository = yaml.safeLoad(fs.readFileSync(repositoryBase + '.yaml', 'utf8'));
-    fs.writeFile(repositoryBase + ".jsonld", JSON.stringify(repository));
+    fs.writeFile(repositoryBase + ".jsonld", JSON.stringify(repository,null,' '));
     console.log("refereshed repository");
 } catch (e) {
     console.error("Error reading repo");
