@@ -11,9 +11,10 @@
   "faldo": "http://biohackathon.org/resource/faldo#",
   "foaf": "http://xmlns.com/foaf/0.1/",
   "oa": "http://www.w3.org/ns/oa#",
-  "identifers": "http://identifiers.org/",
+  "idot": "http://identifiers.org/",
   "void": "http://rdfs.org/ns/void#",
   "doap": "http://usefulinc.com/ns/doap#",
+  "pav": "http://purl.org/pav/",
   "id": "@id",
   "label": "rdfs:label",
   "comment": "rdfs:comment",
@@ -21,6 +22,12 @@
   "source": "dce:source",
   "publisher": "dce:publisher",
   "mailing_list": "doap:mailing-list",
+  "createdWith": "pav:createdWith",
+  "wasDerivedFrom": "pav:wasDerivedFrom",
+  "preferredPrefix": "idot:preferredPrefix",
+  "alternatePrefix": "idot:alternatePrefix",
+  "identifierPattern": "idot:identifierPattern",
+  "exampleIdentifier": "idot:exampleIdentifier",
   "Class": "owl:Class",
   "products": "void:subset",
   "type": {
@@ -39,7 +46,7 @@
    "@id": "foaf:depiction",
    "@type": "@id"
   },
-  "publication": "dcterms:publication",
+  "publications": "dcterms:publication",
   "subClassOf": "owl:subClassOf",
   "title": "dce:title",
   "homepage": {
@@ -63,11 +70,15 @@
    "title": "Uberon multi-species anatomy ontology",
    "description": "Uberon is an integrated cross-species anatomy ontology representing a variety of entities classified according to traditional anatomical criteria such as structure, function and developmental lineage. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data",
    "homepage": "http://uberon.org",
+   "page": "http://en.wikipedia.org/wiki/Uberon",
    "twitter": "uberanat",
    "google_plus": "+UberonOrg",
    "mailing_list": "https://lists.sourceforge.net/lists/listinfo/obo-anatomy",
    "canonical": "uberon.owl",
-   "taxon": "Metazoa",
+   "taxon": {
+    "id": "NCBITaxon:33208",
+    "label": "Metazoa"
+   },
    "domain": "anatomy",
    "repository": "https://github.com/obophenotype/uberon",
    "tracker": "https://github.com/obophenotype/uberon/issues",
@@ -76,7 +87,11 @@
     "email": "cjmungall@lbl.gov",
     "label": "Chris Mungall"
    },
-   "publication": "http://www.ncbi.nlm.nih.gov/pubmed/22293552",
+   "publications": [
+    {
+     "id": "http://www.ncbi.nlm.nih.gov/pubmed/22293552"
+    }
+   ],
    "depicted_by": "http://uberon.github.io/images/u-logo.jpg",
    "redirects": [
     {
@@ -181,6 +196,12 @@
    "title": "Gene Ontology",
    "twitter": "news4go",
    "tracker": "http://sourceforge.net/p/geneontology/ontology-requests/",
+   "termgenie": "http://go.termgenie.org",
+   "taxon": {
+    "id": "NCBITaxon:1",
+    "label": "All life"
+   },
+   "domain": "biology",
    "dependencies": [
     {
      "id": "uberon",
@@ -197,6 +218,20 @@
     {
      "id": "ro",
      "subset": "go/extensions/ro_import.owl"
+    },
+    {
+     "id": "go/extensions/go-bridge-to-nifstd.owl",
+     "type": "BridgeOntology",
+     "title": "GO bridge to NIFSTD",
+     "description": "Bridging axioms between nifstd and go",
+     "connects": [
+      {
+       "id": "nifstd"
+      },
+      {
+       "id": "go"
+      }
+     ]
     }
    ],
    "products": [
@@ -210,7 +245,14 @@
    "id": "cl",
    "label": "Cell Ontology",
    "title": "Cell Ontology",
+   "description": "The Cell Ontology is designed as a structured controlled vocabulary for cell types. This ontology was constructed for use by the model organism and other bioinformatics databases, where there is a need for a controlled vocabulary of cell types. This ontology is not organism specific it covers cell types from prokaryotes to mammals. However, it excludes plant cell types, which are covered by PO.",
+   "taxon": {
+    "id": "NCBITaxon:33208",
+    "label": "Metazoa"
+   },
+   "domain": "cells",
    "tracker": "https://code.google.com/p/cell-ontology/issues/list",
+   "termgenie": "http://cl.termgenie.org",
    "mailing_list": "https://lists.sourceforge.net/lists/listinfo/obo-cell-type",
    "dependencies": [
     {
@@ -239,17 +281,147 @@
    "canonical": "ro.owl",
    "tracker": "https://code.google.com/p/obo-relations/issues/list",
    "mailing_list": "https://lists.sourceforge.net/lists/listinfo/obo-relations",
+   "domain": "relations",
+   "jobs": [
+    {
+     "id": "http://build.berkeleybop.org/job/build-ro",
+     "type": "DryRunBuild"
+    }
+   ],
    "products": [
     {
      "id": "ro.owl"
     },
     {
      "id": "ro.obo"
+    },
+    {
+     "id": "ro/ro-interaction.owl"
     }
    ]
   },
   {
+   "id": "chebi",
+   "alternatePrefix": "ChEBI",
+   "title": "Chemical entities of biological interest",
+   "description": "A structured classification of chemical compounds of biological relevance.",
+   "contact": {
+    "email": "hastings@ebi.ac.uk",
+    "label": "Janna Hastings"
+   },
+   "domain": "biochemistry",
+   "homepage": "http://www.ebi.ac.uk/chebi",
+   "page": "http://www.ebi.ac.uk/chebi/init.do?toolBarForward=userManual",
+   "products": [
+    {
+     "id": "chebi.owl"
+    },
+    {
+     "id": "chebi.obo"
+    }
+   ],
+   "tracker": "https://sourceforge.net/p/chebi/curator-requests/"
+  },
+  {
+   "id": "oba",
+   "title": "Ontology of Biological Attributes",
+   "description": "A collection of biological attributes (traits) covering all kingdoms of life. Incorporates VT (vertebrate trait ontology) and TO (plant trait ontology). Extends PATO.",
+   "contact": {
+    "email": "cjmungall@lbl.gov",
+    "label": "Chris Mungall"
+   },
+   "jobs": [
+    {
+     "id": "http://build.berkeleybop.org/job/build-bio-attributes",
+     "type": "DryRunBuild"
+    }
+   ],
+   "termgenie": "http://oba.termgenie.org",
+   "domain": "phenotype",
+   "homepage": "http://wiki.geneontology.org/index.php/Extensions/x-attribute",
+   "page": "http://wiki.geneontology.org/index.php/Extensions/x-attribute",
+   "products": [
+    {
+     "id": "oba.obo"
+    }
+   ]
+  },
+  {
+   "id": "hp",
+   "alternativePrefix": "HPO",
+   "description": "The Human Phenotype Ontology is being developed to provide a structured and controlled vocabulary for the phenotypic features encountered in human hereditary and other disease. Our goal is to provide resource for the computational analysis of the human phenome, with a current focus on monogenic diseases listed in the Online Mendelian Inheritance in Man (OMIM) database, for which annotations are also provided.",
+   "domain": "phenotype",
+   "homepage": "http://www.human-phenotype-ontology.org/",
+   "contact": {
+    "email": "peter.robinson@charite.de",
+    "label": "Peter Robinson"
+   },
+   "products": [
+    {
+     "id": "hp.owl"
+    },
+    {
+     "id": "hp.obo"
+    }
+   ],
+   "taxon": {
+    "id": "NCBITaxon:9606",
+    "label": "Homo sapiens"
+   },
+   "title": "human phenotype ontology",
+   "tracker": "https://sourceforge.net/p/obo/human-phenotype-requests/",
+   "termgenie": "http://hp.termgenie,org"
+  },
+  {
+   "id": "mp",
+   "title": "Mammalian phenotype",
+   "description": "The Mammalian Phenotype Ontology is under development as a community effort to provide standard terms for annotating mammalian phenotypic data.",
+   "homepage": "http://www.informatics.jax.org/searches/MP_form.shtml",
+   "contact": {
+    "email": "pheno@jax.org",
+    "label": "JAX phenotype list"
+   },
+   "domain": "phenotype",
+   "products": [
+    {
+     "id": "mp.owl"
+    },
+    {
+     "id": "mp.obo"
+    }
+   ],
+   "taxon": {
+    "id": "NCBITaxon:10088",
+    "label": "Mus"
+   },
+   "tracker": "https://sourceforge.net/p/obo/mammalian-phenotype-requests/",
+   "termgenie": "http://mp.termgenie.org"
+  },
+  {
+   "id": "fbbt",
+   "preferredPrefix": "FBbt",
+   "contact": {
+    "email": "djs93@gen.cam.ac.uk",
+    "label": "David Osumi-Sutherland"
+   },
+   "description": "A structured controlled vocabulary of the anatomy of Drosophila melanogaster",
+   "domain": "anatomy",
+   "homepage": " http://purl.obolibrary.org/obo/fbbt",
+   "products": [
+    {
+     "id": "fbbt.owl"
+    }
+   ],
+   "taxon": {
+    "id": "NCBITaxon:7227",
+    "label": "Drosophila"
+   },
+   "title": "Drosophila gross anatomy",
+   "tracker": "http://purl.obolibrary.org/obo/fbbt/tracker"
+  },
+  {
    "id": "ncbitaxon",
+   "preferredPrefix": "NCBITaxon",
    "title": "NCBI organismal classification",
    "contact": {
     "email": "obo-taxonomy@lists.sourceforge.net",
@@ -257,9 +429,17 @@
    },
    "description": "The NCBITaxon ontology is an automatic translation of the NCBI taxonomy (a taxonomic classification of living organisms and associated artifacts) database into obo/owl.",
    "source": "http://www.ncbi.nlm.nih.gov/taxonomy",
+   "wasDerivedFrom": "ftp://ftp.ebi.ac.uk/pub/databases/taxonomy/taxonomy.dat",
+   "createdWith": "http://owltools.googlecode.com/",
    "domain": "taxonomy",
    "homepage": "http://www.obofoundry.org/wiki/index.php/NCBITaxon:Main_Page",
    "page": "http://www.ncbi.nlm.nih.gov/taxonomy",
+   "jobs": [
+    {
+     "id": "http://build.berkeleybop.org/job/build-ncbitaxon/",
+     "type": "ReleaseBuild"
+    }
+   ],
    "products": [
     {
      "id": "ncbitaxon.owl"
@@ -268,6 +448,39 @@
      "id": "ncbitaxon/subsets/taxslim.owl"
     }
    ]
+  },
+  {
+   "id": "fma",
+   "contact": {
+    "email": "mejino@comcast.net",
+    "label": "Onard Mejino"
+   },
+   "description": "Obo format translation of the FMA, omitting all relationships other than is_a, part_of and has_part. Future versions of fma_obo will include more relationships",
+   "domain": "anatomy",
+   "homepage": "http://sig.biostr.washington.edu/projects/fm/index.html",
+   "page": "http://en.wikipedia.org/wiki/Foundational_Model_of_Anatomy",
+   "publications": [
+    {
+     "id": "http://www.ncbi.nlm.nih.gov/pubmed/18688289"
+    },
+    {
+     "id": "http://www.ncbi.nlm.nih.gov/pubmed/18360535"
+    },
+    {
+     "id": "http://www.ncbi.nlm.nih.gov/pubmed/16779026"
+    }
+   ],
+   "products": [
+    {
+     "id": "fma.owl"
+    }
+   ],
+   "taxon": {
+    "id": "NCBITaxon:9606",
+    "label": "Homo sapiens"
+   },
+   "title": "Foundational Model of Anatomy (subset)",
+   "tracker": "https://sourceforge.net/p/obo/foundational-model-of-anatomy-fma-requests/"
   },
   {
    "id": "iao",
@@ -295,6 +508,69 @@
    ],
    "title": "Information Artifact Ontology",
    "tracker": "http://code.google.com/p/information-artifact-ontology/issues/list"
+  },
+  {
+   "id": "rs",
+   "contact": {
+    "email": "rnigam@mcw.edu",
+    "label": "Rajni Nigam"
+   },
+   "description": "Ontology of rat strains",
+   "homepage": "http://rgd.mcw.edu/",
+   "publications": [
+    {
+     "id": "http://www.ncbi.nlm.nih.gov/pubmed/24267899"
+    }
+   ],
+   "products": [
+    {
+     "id": "rs.owl"
+    }
+   ],
+   "title": "Rat Strain Ontology"
+  },
+  {
+   "id": "dpo",
+   "title": "Drosophila Phenotype Ontology",
+   "preferredPrefix": "FBcv",
+   "products": [
+    {
+     "id": "dpo.owl"
+    }
+   ],
+   "contact": {
+    "email": "djs93@gen.cam.ac.uk",
+    "label": "David Osumi-Sutherland"
+   },
+   "description": "An ontology of commonly encountered and/or high level Drosophila phenotypes.  It has significant formalisation - utilising terms from GO, CL, PATO and the Drosophila anatomy ontology.  It has been used by FlyBase for > 159000 annotations of phenotype",
+   "homepage": "http://www.flybase.org/"
+  },
+  {
+   "id": "pato",
+   "title": "Phenotypic quality",
+   "description": "Phenotypic qualities (properties). This ontology can be used in conjunction with other ontologies such as GO or anatomical ontologies to refer to phenotypes. Examples of qualities are red, ectopic, high temperature, fused, small, edematous and arrested.",
+   "contact": {
+    "email": "geg18@aber.ac.uk",
+    "label": "George Gkoutos"
+   },
+   "domain": "phenotype",
+   "homepage": "http://obofoundry.org/wiki/index.php/PATO:Main_Page",
+   "repository": "https://github.com/gkoutos/pato",
+   "tracker": "https://github.com/gkoutos/pato/issues",
+   "jobs": [
+    {
+     "id": "http://build.berkeleybop.org/job/build-pato",
+     "type": "DryRunBuild"
+    }
+   ],
+   "products": [
+    {
+     "id": "pato.owl"
+    },
+    {
+     "id": "pato.obo"
+    }
+   ]
   },
   {
    "contact": {
@@ -709,45 +985,6 @@
   },
   {
    "contact": {
-    "email": "hastings@ebi.ac.uk",
-    "label": "Janna Hastings"
-   },
-   "description": "A structured classification of chemical compounds of biological relevance.",
-   "domain": "biochemistry",
-   "homepage": "http://www.ebi.ac.uk/chebi",
-   "id": "chebi",
-   "page": "http://www.ebi.ac.uk/chebi/init.do?toolBarForward=userManual",
-   "products": [
-    {
-     "id": "chebi.owl"
-    }
-   ],
-   "title": "Chemical entities of biological interest",
-   "tracker": "http://sourceforge.net/tracker/?group_id=125463&atid=703818"
-  },
-  {
-   "contact": {
-    "email": "djs93@gen.cam.ac.uk",
-    "label": "David Osumi-Sutherland"
-   },
-   "description": "A structured controlled vocabulary of the anatomy of <i>Drosophila melanogaster</i>.",
-   "domain": "anatomy",
-   "homepage": " http://purl.obolibrary.org/obo/fbbt",
-   "id": "fbbt",
-   "products": [
-    {
-     "id": "fbbt.owl"
-    }
-   ],
-   "taxon": {
-    "id": "NCBITaxon:7227",
-    "label": "Drosophila"
-   },
-   "title": "Drosophila gross anatomy",
-   "tracker": "http://purl.obolibrary.org/obo/fbbt/tracker"
-  },
-  {
-   "contact": {
     "email": "garys@caltech.edu",
     "label": "Gary Schindelman"
    },
@@ -799,28 +1036,6 @@
     }
    ],
    "title": "Protein-protein interaction"
-  },
-  {
-   "contact": {
-    "email": "peter.robinson@charite.de",
-    "label": "Peter Robinson"
-   },
-   "description": "The Human Phenotype Ontology is being developed to provide a structured and controlled vocabulary for the phenotypic features encountered in human hereditary and other disease. Our goal is to provide resource for the computational analysis of the human phenome, with a current focus on monogenic diseases listed in the Online Mendelian Inheritance in Man (OMIM) database, for which annotations are also provided.",
-   "domain": "phenotype",
-   "homepage": "http://www.human-phenotype-ontology.org/",
-   "id": "hp",
-   "page": "http://www.human-phenotype-ontology.org/",
-   "products": [
-    {
-     "id": "hp.owl"
-    }
-   ],
-   "taxon": {
-    "id": "NCBITaxon:9606",
-    "label": "Homo sapiens"
-   },
-   "title": "human phenotype ontology",
-   "tracker": "http://sourceforge.net/tracker/?atid=1112722&group_id=76834"
   },
   {
    "id": "fugo",
@@ -1194,27 +1409,6 @@
   },
   {
    "contact": {
-    "email": "mejino@comcast.net",
-    "label": "Onard Mejino"
-   },
-   "description": "Obo format translation of the FMA, omitting all relationships other than is_a, part_of and has_part. Future versions of fma_obo will include more relationships",
-   "domain": "anatomy",
-   "homepage": "http://sig.biostr.washington.edu/projects/fm/index.html",
-   "id": "fma",
-   "products": [
-    {
-     "id": "fma.owl"
-    }
-   ],
-   "taxon": {
-    "id": "NCBITaxon:9606",
-    "label": "Homo sapiens"
-   },
-   "title": "Foundational Model of Anatomy (subset)",
-   "tracker": "http://sourceforge.net/tracker/?group_id=76834&atid=974957"
-  },
-  {
-   "contact": {
     "email": "J.Bard@ed.ac.uk",
     "label": "Jonathan Bard"
    },
@@ -1225,6 +1419,9 @@
    "products": [
     {
      "id": "ehdaa2.owl"
+    },
+    {
+     "id": "ehdaa2.obo"
     }
    ],
    "taxon": {
@@ -1232,37 +1429,6 @@
     "label": "Homo sapiens"
    },
    "title": "Human developmental anatomy, abstract version, v2"
-  },
-  {
-   "contact": {
-    "email": "rnigam@mcw.edu",
-    "label": "Rajni Nigam"
-   },
-   "description": "Ontology of rat strains",
-   "homepage": "http://rgd.mcw.edu/",
-   "id": "rs",
-   "products": [
-    {
-     "id": "rs.owl"
-    }
-   ],
-   "title": "Rat Strain Ontology"
-  },
-  {
-   "contact": {
-    "email": "geg18@aber.ac.uk",
-    "label": "George Gkoutos"
-   },
-   "description": "Phenotypic qualities (properties). This ontology can be used in conjunction with other ontologies such as GO or anatomical ontologies to refer to phenotypes. Examples of qualities are red, ectopic, high temperature, fused, small, edematous and arrested.",
-   "domain": "phenotype",
-   "homepage": "http://obofoundry.org/wiki/index.php/PATO:Main_Page",
-   "id": "pato",
-   "products": [
-    {
-     "id": "pato.owl"
-    }
-   ],
-   "title": "Phenotypic quality"
   },
   {
    "contact": {
@@ -1299,7 +1465,7 @@
     }
    ],
    "title": "Common Anatomy Reference Ontology",
-   "tracker": "http://sourceforge.net/tracker/?group_id=76834&atid=996206"
+   "tracker": "https://sourceforge.net/p/obo/common-anatomy-reference-ontology-caro-requests/"
   },
   {
    "description": "A structured controlled vocabulary of the anatomy and development of the African clawed frog (<i>Xenopus laevis</i>).",
@@ -1316,7 +1482,7 @@
     "label": "Xenopus"
    },
    "title": "Xenopus anatomy and development",
-   "tracker": "https://sourceforge.net/tracker/?group_id=76834&atid=1127722"
+   "tracker": "https://sourceforge.net/p/obo/xenopus-anatomy-xao-term-requests/"
   },
   {
    "contact": {
@@ -1509,27 +1675,6 @@
     "label": "Mus"
    },
    "title": "Mouse pathology"
-  },
-  {
-   "contact": {
-    "email": "pheno@jax.org",
-    "label": "JAX phenotype list"
-   },
-   "description": "The Mammalian Phenotype Ontology is under development as a community effort to provide standard terms for annotating mammalian phenotypic data.",
-   "domain": "phenotype",
-   "homepage": "http://www.informatics.jax.org/searches/MP_form.shtml",
-   "id": "mp",
-   "products": [
-    {
-     "id": "mp.owl"
-    }
-   ],
-   "taxon": {
-    "id": "NCBITaxon:10088",
-    "label": "Mus"
-   },
-   "title": "Mammalian phenotype",
-   "tracker": "http://sourceforge.net/tracker/?atid=1109502&group_id=76834"
   },
   {
    "contact": {
@@ -2165,7 +2310,7 @@
    "title": "Medaka fish anatomy and development"
   },
   {
-   "description": "The Beta Cell Genomics Ontology (BCGO) is an application ontology built for the beta cell genomics studies aiming to support database annotation, complicated semantic queries, and automated cell type classification. The ontology is developed using Basic Formal Ontology (BFO) as upper ",
+   "description": "The Beta Cell Genomics Ontology (BCGO) is an application ontology built for the beta cell genomics studies aiming to support database annotation, complicated semantic queries, and automated cell type classification.",
    "homepage": "http://code.google.com/p/bcgo-ontology/",
    "id": "bcgo",
    "page": "http://code.google.com/p/bcgo-ontology/",

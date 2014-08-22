@@ -34,10 +34,15 @@ while(<F>) {
         my ($k,$v) = ($1,$2);
         if ($k eq 'namespace') {
             $id = lc($v);
+            print STDERR "ID=$id\n";
         }
         $h{$k} = $v;
     }
 }
+foreach (keys %h) {
+    $ont{$id}->{$_} = $h{$_};
+}
+
 close(F);
 
 # trackers

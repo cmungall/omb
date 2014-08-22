@@ -96,7 +96,6 @@ It would be trivial to implemented overrides (e.g. for PR). TODO.
 
 
 
-
 ## TODO
 
  * separate registry from browser code

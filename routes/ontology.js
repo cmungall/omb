@@ -30,11 +30,16 @@ addTags = function(ontology) {
             ontology.description_short = ontology.description;
         }
     }
-    if (ontology.publication != null) {
-        var m = ontology.publication.match(/pubmed.(\d+)/);
-        if (m) {
-            ontology.citations_pubmed = "http://www.ncbi.nlm.nih.gov/pubmed?linkname=pubmed_pubmed&from_uid=" + m[1];
-        }
+    if (ontology.publications != null) {
+        ontology.publications.forEach(function(pub) {
+            var m = pub.id.match(/pubmed.(\d+)/);
+            if (m) {
+                pub.citations_link = "http://www.ncbi.nlm.nih.gov/pubmed?linkname=pubmed_pubmed&from_uid=" + m[1];
+            }
+        });
+    }
+    else {
+        ontology.publications = [];
     }
     if (ontology.products == null) {
         ontology.products = [

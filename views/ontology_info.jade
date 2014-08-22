@@ -1,16 +1,23 @@
 extends layout
 
 block content
-    h1
-        Name #{ont.label}
+    title= ont.label
+
+    div(class="page-header")      
+      h1
+        Name #{ont.label}  &nbsp;
+        small= ont.title
     div
       if ont.depicted_by
         img(src="#{ont.depicted_by}")
       if ont.twitter
-        div(class="btn-o" data-scribe="component:button" contextmenu="menu")
+        div(class="twitter-follow-button" data-show-count="true" data-scribe="component:button" contextmenu="menu")
           a(id="follow-button" class="btn" title="Follow #{ont.id} (@#{ont.twitter}) on Twitter" href="https://twitter.com/intent/follow?screen_name=#{ont.twitter}&tw_p=followbutton&variant=2.0") follow #{ont.twitter}
             i
             span(id="l" class="label")
+    div(class="jumbotron")
+      p= ont.description
+
     div
       dl(class="dl-horizontal")
         dt id
@@ -22,13 +29,26 @@ block content
         dt description
         dd= ont.description
 
+        if ont.domain
+          dt domain
+          dd= ont.domain
+
+        if ont.taxon
+          dt taxon
+          dd
+           a(href="http://purl.obolibrary.org/obo/{ont.taxon.id}")= ont.taxon.label
+
         dt homepage
         dd 
           a(href="#{ont.homepage}")= ont.homepage
 
         dt repository
-        dd 
+        dd URL: 
           a(href="#{ont.repository}")= ont.repository
+
+        if ont.termgenie
+          dt TermGenie
+          dd= ont.termgenie
 
         dt tracker
         dd 
@@ -38,15 +58,15 @@ block content
             button(type="button" class="btn btn-danger") This ontology has no tracker
 
 
-        if ont.publication
+        each p in ont.publications
           dt publication
           dd
-           a(href="#{ont.publication}")= ont.publication 
+           a(href="#{p.id}")= p.id 
           dt citations
           dd
-           a(href="#{ont.citations_pubmed}") [Pubmed]
+           a(href="#{p.citations_link}") [Pubmed]
            span .
-           a(href="http://scholar.google.com/scholar?cites=#{ont.publication}") [Google Scholar]
+           a(href="http://scholar.google.com/scholar?cites=#{p.id}") [Google Scholar]
 
         dt social media
         dd 
@@ -55,7 +75,7 @@ block content
               a(href="http://twitter.com/#{ont.twitter}") &nbsp; twitter 
           if ont.google_plus
             span
-              a(href="http://twitter.com/#{ont.google_plus}") &nbsp; G+
+              a(href="http://google.com/#{ont.google_plus}") &nbsp; G+
 
 
     div
