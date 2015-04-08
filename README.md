@@ -15,6 +15,10 @@ Latest version may or may not be deployed on heroku
 
  * http://enigmatic-wildwood-5530.herokuapp.com/
 
+Example page:
+
+ * http://enigmatic-wildwood-5530.herokuapp.com/ontology/uberon
+
 ## Improvements over old page
 
  * doesn't suck
